@@ -1,6 +1,6 @@
 html {
   font-size: 20px;
-  color: #999999;
+  color: #999;
   height: 100%;
   width: 100%; }
 
@@ -11,11 +11,15 @@ body {
   overflow-y: scroll;
   min-height: 101%; }
 
+.ycd-bottom-fixed {
+  width: 100%;
+  padding-bottom: 2.5rem; }
+
 @font-face {
   font-family: 'iconfont';
   src: url("http://at.alicdn.com/t/font_1456476471_9418604.eot");
   /* IE9*/
-  src: url("http://at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("http://at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg");
+  src: url("http://at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("http://at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg")
   /* iOS 4.1- */ }
 [class^=ycd-font-icon] {
   display: inline-block;
@@ -37,11 +41,17 @@ body {
   bottom: 0px;
   left: 0px;
   background: #eae9e9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .ycd-bottom .ycd-foot-tab {
   display: inline-block;
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   text-align: center;
   overflow: hidden; }
@@ -50,7 +60,7 @@ body {
   display: inline-block;
   width: 100%;
   height: 100%;
-  color: #999999; }
+  color: #999; }
 
 .ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a-cur {
   color: #1db489; }
@@ -69,6 +79,9 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   z-index: 99; }
 
@@ -87,7 +100,10 @@ body {
   display: inline-block;
   height: 1.5rem;
   position: relative;
-  flex: 1; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .ycd-js-search-input {
   border-radius: 0.9rem;
@@ -105,6 +121,7 @@ body {
   right: 0.55rem; }
 
 .ycd-gradient-top-bg {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent);
   background: linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); }
 
 .ycd-header-search-box {
@@ -117,8 +134,14 @@ body {
   width: calc(100% -1.75rem);
   padding: 1.6rem 1.75rem;
   height: 7.1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .ycd-index-categry-list .ycd-index-categry-item {
   width: 5.6rem;
@@ -176,9 +199,84 @@ body {
   padding: 0.9rem;
   width: calc(100% - 1.8rem);
   height: auto;
-  display: flex; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .ycd-floor-goods-area img {
+    width: 100%; }
+  .ycd-floor-goods-area .ycd-floor-goods-area-item-fix-justify {
+    width: 100%;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    line-height: 0;
+    display: inline-block; }
+  .ycd-floor-goods-area .ycd-floor-goods-area-item {
+    position: relative;
+    width: 14.3rem;
+    height: 9.35rem;
+    border: 1px solid #c9c9c9;
+    margin-bottom: 0.5rem;
+    font-family: "Microsoft YaHei"; }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item i {
+      display: inline-block;
+      width: 3.15rem;
+      height: 3.25rem;
+      position: absolute;
+      left: 0.45rem;
+      top: 0.45rem;
+      text-align: center;
+      line-height: 3.25rem;
+      font-size: 1rem;
+      font-style: normal; }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item i.green {
+      background: url(../images/icon_count_down_gr.png) no-repeat left top;
+      background-size: 100% 100%;
+      color: #7bff96; }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item i.orange {
+      background: url(../images/icon_count_down_or.png) no-repeat left top;
+      background-size: 100% 100%;
+      color: #f95c2d; }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item h2 {
+      position: absolute;
+      left: 0.45rem;
+      top: 4.9rem;
+      font-size: 1rem;
+      color: #767676; }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item p.info {
+      position: absolute;
+      left: 0.45rem;
+      top: 6.5rem; }
+      .ycd-floor-goods-area .ycd-floor-goods-area-item p.info span.price {
+        color: #f56c3e;
+        font-size: 1rem; }
+      .ycd-floor-goods-area .ycd-floor-goods-area-item p.info span.weight {
+        color: #676767;
+        font-size: 0.8rem;
+        padding-left: 0.25rem; }
+    .ycd-floor-goods-area .ycd-floor-goods-area-item .goods-img {
+      width: 8.9rem;
+      height: 7.5rem;
+      top: 1.95rem;
+      position: absolute;
+      right: 0; }
+      .ycd-floor-goods-area .ycd-floor-goods-area-item .goods-img img {
+        width: 100%;
+        height: 100%;
+        border: none; }
 
-.ycd-floor-goods-area img {
-  width: 100%; }
+@media screen and (max-width: 360px) {
+  .ycd-floor-goods-area .ycd-floor-goods-area-item {
+    width: 100%; } }
 
 /*# sourceMappingURL=ycaidao.css.map */

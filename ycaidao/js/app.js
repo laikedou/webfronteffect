@@ -110,6 +110,6 @@ Zepto(function($){
 		    } 
     }
     //初始化定位
-    initGeolocation();
+    //initGeolocation();
    
 });

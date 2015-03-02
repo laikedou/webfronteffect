@@ -2,6 +2,9 @@ $browser-default-font-size:20px !default;
 $default-font-color:#999;
 $header-top-offset:pxTorem(20px);
 $calc-width:'-webkit-calc(100% - 1rem)';
+@function pxTorem($px) {
+	@return $px / $browser-default-font-size *1rem;
+}
 html{
 	font-size:$browser-default-font-size;
 	color:$default-font-color;
@@ -15,10 +18,10 @@ body{
 	overflow-y:scroll;
 	min-height: 101%;
 }
-@function pxTorem($px) {
-	@return $px / $browser-default-font-size *1rem;
+.ycd-bottom-fixed{
+	width:100%;
+	padding-bottom: pxTorem(50px);
 }
-
 @font-face {
   font-family: 'iconfont';
   src: url('http://at.alicdn.com/t/font_1456476471_9418604.eot'); /* IE9*/
@@ -186,12 +189,101 @@ body{
     float:right;
     margin-top:pxTorem(24px);
 }
+
 .ycd-floor-goods-area{
 	padding:pxTorem(18px);
 	width:calc(100% - 1.8rem);
 	height:auto;
-	display: flex;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+	img{
+		width:100%;
+	}
+	.ycd-floor-goods-area-item-fix-justify{
+		width:100%;
+		height:0;
+		font-size:0;
+		overflow:hidden;
+		line-height:0;
+		display:inline-block;
+	}
+	.ycd-floor-goods-area-item{
+              &:hover{
+                  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+              }
+              position: relative;
+		      width:pxTorem(286px);
+		      height:pxTorem(187px);
+		      border:1px solid #c9c9c9;
+		      margin-bottom:pxTorem(10px);
+		      font-family: "Microsoft YaHei";
+              i{
+              	display:inline-block;
+              	width:pxTorem(63px);
+              	height:pxTorem(65px);
+              	position: absolute;
+              	left:pxTorem(9px);
+              	top:pxTorem(9px);
+              	text-align: center;
+              	line-height: pxTorem(65px);
+              	font-size:pxTorem(20px);
+              	font-style:normal;
+              }
+
+              i.green{
+                     background: url(../images/icon_count_down_gr.png) no-repeat left top;
+                     background-size:100% 100%;
+                     color:#7bff96;
+              }
+              i.orange{
+                     background: url(../images/icon_count_down_or.png) no-repeat left top;
+                     background-size:100% 100%;
+                     color:#f95c2d;
+              }
+              h2{
+                position: absolute;
+                left:pxTorem(9px);
+                top:pxTorem(98px);
+                font-size: pxTorem(20px);
+                color:#767676;
+                
+              }
+              p.info{
+              	     position: absolute;
+              	     left:pxTorem(9px);
+              	     top:pxTorem(130px);
+                     span.price{
+                     	color:#f56c3e;
+                     	font-size:pxTorem(20px);
+                     }
+                     span.weight{
+                       color:#676767;
+                       font-size:pxTorem(16px);
+                       padding-left:pxTorem(5px);
+                     }
+              }
+              .goods-img{
+              	width:pxTorem(178px);
+              	height:pxTorem(150px);
+              	top:pxTorem(39px);
+              	position: absolute;
+              	right:0;
+
+              	img {
+              		width:100%;
+              		height:100%;
+              		border:none;
+              	}
+              }
+
+	}
+
 }
-.ycd-floor-goods-area img{
-	width:100%;
+@media screen and (max-width:360px){
+	.ycd-floor-goods-area{
+		.ycd-floor-goods-area-item{
+			width:100%;
+		}
+	}
 }
