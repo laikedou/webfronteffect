@@ -162,8 +162,9 @@ Zepto(function($){
           $('.ycd-header-search-box').show();
           $('.ycd-header-search-container').show();
       });
-      $('.ycd-index-return').tap(function(){
-         $('.ycd-header-search-box').hide();
+      $('.ycd-index-return').tap(function(event){
+          event.stopPropagation();
+          $('.ycd-header-search-box').hide();
           $('.ycd-header-search-container').hide();
           $('.ycd-js-container').show();
           $('.ycd-header-search-box-top').show();
