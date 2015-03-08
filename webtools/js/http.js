@@ -1,3 +1,17 @@
+//为了兼容低版本的ie浏览器我们需要这样来写兼容代码
+if(window.XMLHttpRequest === undefined){
+     window.XMLHttpRequest = function(){
+        try{
+            return new ActiveObject('Msxml2.XMLHTTP.6.0');
+        }catch(error){
+            try{
+                 return new ActiveObject('Msxml2.HTTP.3.0');
+            }catch(error){
+                 throw new Error('XMLHttpRequest is not supported!');
+            }
+        }
+     }
+}
 //关于http 函数的封装问题
 function getText(url,callback){
 	var request = new XMLHttpRequest();
@@ -41,6 +55,56 @@ function get(url,callback){
 
      	 }
      }
+}
+function encodeFormData(data){
+  if(!data) return;
+  var pairs = [];
+  for(var name in data){
+    if(!data.hasOwnProperty(name)){ continue;}
+    if(typeof data[name] === 'function') continue;
+    var value = data[name];
+    name = encodeURIComponent(name.replace('%20',"+"));
+    value = encodeURIComponent(value.replace('%20','+'));
+    pairs.push(name+'='+value);
+  }
+}
+
+//使用表单编码数据发起一个http post请求
+function postData(url,data,callback){
+  var request = new XMLHttpRequest();
+  request.open('POST',url);
+  request.onreadystatechange = function(event){
+    event = event || window.event;
+    if(request.readyState ===4 && callback){
+         callback(request);
+    }
+  }
+  request.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  request.send(encodeFormData(data));
+}
+//使用表单编码数据发起一个get请求
+function getData(url,data,callback){
+  var request = new XMLHttpRequest();
+  request.open("GET",url+"?"+encodeFormData(data));
+  request.onreadystatechange = function(){
+    if(request.readyState ===4 && callback){
+       callback(request);
+    }
+  }
+  request.send(null);
+
+}
+//使用json编码的请求发送http post 请求
+function postJSON(url,data,callback){
+    var request = new XMLHttpRequest();
+    request.open("POST",url);
+    request.onreadystatechange = function(){
+      if(request.readyState === 4 && callback){
+         callback(request);
+      }
+    }
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify(data));
 }
 
 window.onload = function (){
