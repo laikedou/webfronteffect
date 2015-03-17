@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+    <!--考虑到iPhone ipad 使用的retina 屏幕 dpr=2 所以 1/2=0.5 进行适配对页面进行缩放 可能导致字体变化但是使用rem 暂时不存在此问题-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/gloabal.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/ycaidao.css">
+    <link rel="stylesheet" type="text/css" href="css/category.css">
+    <link rel="stylesheet" type="text/css" href="css/alert.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+    <title>有菜到手机客户端</title>
+    <script type="text/javascript">
+          var _curpage = 'myhome';
+    </script>
+    <style>
+       body{
+       	background:#ebebeb;
+       }
+    </style>
+</head>
+<body>
+<!--头部部分-->
+<div class="ycd-my-top-bar">
+     <a href="" class="ycd-my-settings">设置</a>
+	 <div class="ycd-my-avatar">
+	 	 <a href="" class="ycd-my-img">
+	 	 	 <img src="images/avatar.png" alt="">
+	 	 </a>
+	 	 <span class="ycd-my-username">
+	 	 	菜菜
+	 	 </span>
+	 	 <span class="ycd-my-id">
+	 	 	(ID:15426)
+	 	 </span>
+	 </div>
+</div>
+<!--用户中心操作列表可以左右滑动-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	     <div class="ycd-my-categry-list">
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-dingdan">&#xe63a;</span>
+					  	 <span class="ycd-my-categry-name">我的订单</span>
+					  </a>
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-hongbao">&#xe63b;</span>
+					  	 <span class="ycd-my-categry-name">优惠红包</span>
+					  </a>
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-dizhi">&#xe638;</span>
+					  	 <span class="ycd-my-categry-name">地址管理</span>
+					  </a>
+					  
+				</div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="ycd-my-categry-list">
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-mybounus">&#xe637;</span>
+					  	 <span class="ycd-my-categry-name">我的钱包</span>
+					  </a>
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-message">&#xe63d;</span>
+					  	 <span class="ycd-my-categry-name">我的留言</span>
+					  </a>
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-loginout">&#xe639;</span>
+					  	 <span class="ycd-my-categry-name">注销登录</span>
+					  </a>
+				</div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="ycd-my-categry-list">
+					  <a class="ycd-my-categry-item" href="">
+					  	 <span class="ycd-font-icon ycd-my-categry-icon  ycd-icon-pingjia">&#xe63c;</span>
+					  	 <span class="ycd-my-categry-name">我的评价</span>
+					  </a>
+				</div>
+        </div>
+    </div>
+</div>
+<!--用户中心操作列表-->
+<div class="ycd-my-user-op-list">
+	   <dl>
+		   <a href="">
+		   		<span class="ycd-font-icon ycd-my-op-icon">&#xe63d;</span>
+		   		<dt>关于有菜到</dt>
+		   		<dd>></dd>
+		   	</a>
+	   	</dl>
+	   <dl>
+		   <a href="">
+		   		<span class="ycd-font-icon ycd-my-op-icon">&#xe63d;</span>
+		   		<dt>提交新品需求</dt>
+		   		<dd>></dd>
+		   	</a>
+	   	</dl>
+	   <dl>
+		   <a href="">
+		   		<span class="ycd-font-icon ycd-my-op-icon">&#xe639;</span>
+		   		<dt>意见反馈</dt>
+		   		<dd>></dd>
+		   	</a>
+	   	</dl>
+	   <dl>
+		   <a href="">
+		   		<span class="ycd-font-icon ycd-my-op-icon">&#xe63c;</span>
+		   		<dt>客服电话 4008-114-510</dt>
+		   		<dd>></dd>
+		   	</a>
+	   	</dl>
+</div>
+<!--底部导航栏-->
+<div class="ycd-bottom">
+	  <div class="ycd-foot-tab">
+	  	 <a class="ycd-foot-tab-a ycd-foot-tab-a-cur" href="javascript:void(0);">
+	  	 	<span class="ycd-font-icon ycd-foot-icon ycd-foot-icon-index " data-current="&#xe609;" data-default="&#xe60a;"></span>
+	  	    <div class="ycd-foot-tab-name">首页</div>
+	  	 </a>
+	  </div>
+	  <div class="ycd-foot-tab">
+	  	 <a class="ycd-foot-tab-a" href="javascript:void(0);">
+	  	 	<span class="ycd-font-icon ycd-foot-icon ycd-foot-icon-categry" data-current="&#xe626;" data-default="&#xe623;"></span>
+	  	    <div class="ycd-foot-tab-name">全部商品</div>
+	  	 </a>
+	  </div>
+	  <div class="ycd-foot-tab">
+	  	 <a class="ycd-foot-tab-a" href="javascript:void(0);">
+	  	 	<span class="ycd-font-icon ycd-foot-icon ycd-foot-icon-cart" data-current="&#xe616;" data-default="&#xe617;"></span>
+	  	    <div class="ycd-foot-tab-name">购物车</div>
+	  	 </a>
+	  </div>
+	  <div class="ycd-foot-tab">
+	  	 <a class="ycd-foot-tab-a" href="javascript:void(0);">
+	  	 	<span class="ycd-font-icon ycd-foot-icon ycd-foot-icon-my" data-current="&#xe61b;" data-default="&#xe61c;"></span>
+	  	    <div class="ycd-foot-tab-name">我的</div>
+	  	 </a>
+	  </div>
+</div>
+<script src="js/zepto.js"></script>
+<script src="js/zepto.popup.js"></script>
+<script src="js/zepto.slider.js"></script>
+<script src="js/swiper3.1.zepto.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+	Zepto(function($){
+		
+	});
+
+</script>
+<script>
+	   //初始化swiper
+   var myCategrySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true
+  })      
+</script>
+</body>
+</html>

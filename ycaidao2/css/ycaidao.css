@@ -17,9 +17,9 @@ body {
 
 @font-face {
   font-family: 'iconfont';
-  src: url("http://at.alicdn.com/t/font_1457594361_143262.eot");
+  src: url("http://at.alicdn.com/t/font_1458198316_830402.eot");
   /* IE9*/
-  src: url("http://at.alicdn.com/t/font_1457594361_143262.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1457594361_143262.woff") format("woff"), url("http://at.alicdn.com/t/font_1457594361_143262.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1457594361_143262.svg#iconfont") format("svg")
+  src: url("http://at.alicdn.com/t/font_1458198316_830402.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1458198316_830402.woff") format("woff"), url("http://at.alicdn.com/t/font_1458198316_830402.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1458198316_830402.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
 [class^=ycd-font-icon] {
   display: inline-block;
@@ -41,19 +41,13 @@ body {
   bottom: 0px;
   left: 0px;
   background: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   z-index: 99;
   border-top: 1px solid #d6d7dc; }
 
 .ycd-bottom .ycd-foot-tab {
   display: inline-block;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 100%;
   text-align: center;
   overflow: hidden; }
@@ -65,7 +59,7 @@ body {
   color: #999; }
 
 .ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a-cur {
-  color: #55a533; }
+  color: #f34a47; }
 
 .ycd-bottom .ycd-foot-tab .ycd-foot-icon {
   margin-top: 0.75rem;
@@ -108,7 +102,6 @@ body {
   height: auto; }
 
 .ycd-gradient-top-bg {
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent);
   background: linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); }
 
 .ycd-header-search-box {
@@ -121,14 +114,8 @@ body {
   width: calc(100% - 4.7rem);
   padding: 1.8rem 2.35rem;
   height: 5.35rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  justify-content: center; }
   .ycd-index-categry-list .ycd-index-categry-item {
     width: 5rem;
     height: 5.35rem;
@@ -220,17 +207,9 @@ body {
 .ycd-floor-goods-area {
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
   .ycd-floor-goods-area .ycd-floor-goods-area-item-fix-justify {
     width: 100%;
     height: 0;
@@ -289,14 +268,7 @@ body {
     width: 100%; } }
 .ycd-top-bg-animation {
   background: rgba(85, 165, 51, 0.8);
-  -webkit-animation: bgChange 1000ms linear;
-          animation: bgChange 1000ms linear; }
-
-@-webkit-keyframes bgChange {
-  0% {
-    background: rgba(0, 0, 0, 0.2); }
-  100% {
-    background: rgba(85, 165, 51, 0.8); } }
+  animation: bgChange 1000ms linear; }
 
 @keyframes bgChange {
   0% {
@@ -311,8 +283,7 @@ body {
   color: #fff;
   height: 1rem;
   line-height: 1rem;
-  -webkit-transition: background .2s linear;
-          transition: background .2s linear;
+  transition: background .2s linear;
   min-width: 2rem;
   font-size: 0.6rem; }
   .ycd-btn:hover {
@@ -333,9 +304,6 @@ body {
   padding: 0.3rem 0.4rem;
   width: calc(100% - 0.8rem);
   background: #21b387;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   top: 0; }
   .ycd-header-search-box input[type=text].ycd-header-search-box-input {
@@ -386,8 +354,7 @@ body {
     height: 1rem;
     line-height: 1rem;
     font-size: 0.6rem;
-    -webkit-transition: background .2s linear;
-            transition: background .2s linear;
+    transition: background .2s linear;
     margin-left: 0.25rem; }
     .ycd-header-search-container .ycd-header-search-tags a:hover {
       background: rgba(0, 0, 0, 0.3);
@@ -399,5 +366,140 @@ body {
 .ycd-header-search-result {
   width: 100%;
   height: auto; }
+
+.ycd-my-top-bar {
+  width: 100%;
+  height: 10.5rem;
+  background: #55a533;
+  position: relative; }
+  .ycd-my-top-bar .ycd-my-settings {
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #fff;
+    font-size: 0.8rem;
+    background: rgba(28, 27, 26, 0.4);
+    position: absolute;
+    right: 0.65rem;
+    top: 0.8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-family: "Microsoft YaHei"; }
+  .ycd-my-top-bar .ycd-my-avatar {
+    padding-top: 2.75rem;
+    height: 5rem;
+    line-height: 5rem;
+    display: flex; }
+    .ycd-my-top-bar .ycd-my-avatar a.ycd-my-img {
+      display: inline-block;
+      margin-left: 1.25rem; }
+      .ycd-my-top-bar .ycd-my-avatar a.ycd-my-img img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%; }
+    .ycd-my-top-bar .ycd-my-avatar span {
+      display: inline-block;
+      padding: 0 0.1rem;
+      font-size: 1rem;
+      font-weight: 400; }
+    .ycd-my-top-bar .ycd-my-avatar span.ycd-my-username {
+      color: #2b2b2b;
+      margin-left: 1rem; }
+    .ycd-my-top-bar .ycd-my-avatar span.ycd-my-id {
+      color: #2b2b2b;
+      font-weight: 700; }
+
+.ycd-my-categry-list {
+  width: calc(100% - 4.7rem);
+  padding: 1.8rem 2.35rem;
+  height: 5.35rem;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5; }
+  .ycd-my-categry-list .ycd-my-categry-item {
+    width: 5rem;
+    height: 5.35rem;
+    margin-right: 4.25rem;
+    text-align: center;
+    display: inline-block; }
+  .ycd-my-categry-list .ycd-my-categry-item:last-child {
+    margin-right: 0rem; }
+  .ycd-my-categry-list .ycd-my-categry-item img {
+    display: inline-block;
+    width: 3.7rem; }
+  .ycd-my-categry-list .ycd-my-categry-icon {
+    display: inline-block;
+    width: 3.7rem;
+    height: 3.7rem;
+    text-align: center;
+    line-height: 3.7rem;
+    font-size: 3rem; }
+  .ycd-my-categry-list .ycd-icon-dingdan {
+    color: #eca344;
+    font-size: 3.75rem; }
+  .ycd-my-categry-list .ycd-icon-hongbao {
+    color: #e35050; }
+  .ycd-my-categry-list .ycd-icon-dizhi {
+    color: #4f86e1; }
+  .ycd-my-categry-list .ycd-icon-mybounus {
+    color: #40a6db;
+    font-size: 3.75rem; }
+  .ycd-my-categry-list .ycd-icon-message {
+    color: #f7514e; }
+  .ycd-my-categry-list .ycd-icon-loginout {
+    color: #f58d49; }
+  .ycd-my-categry-list .ycd-icon-pingjia {
+    color: #f44f7e;
+    font-size: 3.75rem; }
+  .ycd-my-categry-list .ycd-my-categry-name {
+    width: 100%;
+    text-align: center;
+    color: #454545;
+    font-family: "Microsoft YaHei";
+    font-size: 1.2rem;
+    display: inline-block;
+    padding-top: 0.6rem; }
+
+.ycd-my-user-op-list {
+  width: 100%;
+  margin-top: 0.6rem;
+  background: #f5f5f5; }
+  .ycd-my-user-op-list dl {
+    padding-left: 1.25rem;
+    border-bottom: 0.05rem solid #969696; }
+    .ycd-my-user-op-list dl:active {
+      background: #55a533;
+      color: #fff; }
+      .ycd-my-user-op-list dl:active span.ycd-my-op-icon {
+        color: #fff; }
+      .ycd-my-user-op-list dl:active dt {
+        color: #fff; }
+      .ycd-my-user-op-list dl:active dd {
+        color: #fff; }
+    .ycd-my-user-op-list dl a {
+      width: 100%;
+      display: inline-block;
+      color: #98a5aa;
+      display: flex;
+      height: 4.3rem;
+      line-height: 4.3rem; }
+      .ycd-my-user-op-list dl a dt {
+        display: inline-block;
+        color: #000017;
+        font-size: 1.6rem;
+        margin-left: 1.2rem; }
+      .ycd-my-user-op-list dl a dd {
+        flex: 1;
+        text-align: right;
+        padding-right: 1.2rem;
+        display: inline-block;
+        font-size: 1.6rem; }
+      .ycd-my-user-op-list dl a span.ycd-my-op-icon {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 4.3rem; }
+  .ycd-my-user-op-list dl:last-child {
+    border: none; }
 
 /*# sourceMappingURL=ycaidao.css.map */

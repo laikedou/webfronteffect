@@ -34,14 +34,22 @@ body {
 .car-popup > * {
   color: inherit; }
 
+.car-popup h2 {
+  font-size: 0.9rem;
+  color: #888; }
+
+.car-popup input[type=radio], .car-popup input[type=checkbox] {
+  width: 0.8rem;
+  height: 0.8rem; }
+
 .car-popup a {
   text-decoration: none; }
 
 .car-popup.hidden {
   opacity: 0;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(0) translate(-50%, -50%);
+      -ms-transform: scale(0) translate(-50%, -50%);
+          transform: scale(0) translate(-50%, -50%);
   top: 50%;
   left: 50%;
   margin: 0 auto; }

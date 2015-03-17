@@ -25,12 +25,13 @@ body{
 
 @font-face {
   font-family: 'iconfont';
-  src: url('http://at.alicdn.com/t/font_1457594361_143262.eot'); /* IE9*/
-  src: url('http://at.alicdn.com/t/font_1457594361_143262.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('http://at.alicdn.com/t/font_1457594361_143262.woff') format('woff'), /* chrome、firefox */
-  url('http://at.alicdn.com/t/font_1457594361_143262.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('http://at.alicdn.com/t/font_1457594361_143262.svg#iconfont') format('svg'); /* iOS 4.1- */
-}    
+  src: url('http://at.alicdn.com/t/font_1458198316_830402.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1458198316_830402.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1458198316_830402.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1458198316_830402.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1458198316_830402.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                     
                          
 [class ^= ycd-font-icon]{
 	display:inline-block;
@@ -71,7 +72,7 @@ body{
   color:$default-font-color;
 }
 .ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a-cur{
-	color:#55a533;
+	color:#f34a47;
 }
 .ycd-bottom .ycd-foot-tab .ycd-foot-icon{
    margin-top:pxTorem(15px);
@@ -443,4 +444,176 @@ body{
 .ycd-header-search-result{
   width:100%;
   height:auto;
+}
+
+.ycd-my-top-bar{
+   width:100%;
+   height:pxTorem(210px);
+   background:#55a533;
+   position: relative;
+   .ycd-my-settings{
+    display: inline-block;
+    width:pxTorem(70px);
+    height:pxTorem(30px);
+    line-height: pxTorem(30px);
+    color:#fff;
+    font-size: pxTorem(16px);
+    background: rgba(28,27,26,0.4);
+    position: absolute;
+    right:pxTorem(13px);
+    top:pxTorem(16px);
+    text-align: center;
+    border-radius: pxTorem(10px);
+    font-family: "Microsoft YaHei";
+   }
+   .ycd-my-avatar{
+      padding-top:pxTorem(55px);
+      height:pxTorem(100px);
+      line-height: pxTorem(100px);
+      display:flex;
+         a.ycd-my-img{
+             display: inline-block;
+             margin-left:pxTorem(25px);
+             img{
+              width:pxTorem(100px);
+              height:pxTorem(100px);
+              border-radius: 50%;
+             }
+         }
+         span{
+             display:inline-block;
+             padding:0 pxTorem(2px);
+             font-size:pxTorem(20px);
+             font-weight: 400;
+             
+         }
+         span.ycd-my-username{
+             color:#2b2b2b;
+             margin-left:pxTorem(20px);
+         }
+         span.ycd-my-id{
+             color:#2b2b2b;
+             font-weight: 700;
+         }
+   }
+
+}
+
+.ycd-my-categry-list{
+  width:calc(100% - 4.7rem);
+  padding:pxTorem(36px) pxTorem(47px);
+  height:pxTorem(107px);
+  display:flex;
+  justify-content:center;
+  background: #f5f5f5;
+  .ycd-my-categry-item{
+      width:pxTorem(100px);
+      height:pxTorem(107px);
+      margin-right:pxTorem(85px);
+      text-align: center;
+      display: inline-block;
+  }
+  .ycd-my-categry-item:last-child{
+  margin-right:pxTorem(0px);
+  }
+   .ycd-my-categry-item img{
+    display:inline-block;
+    width:pxTorem(74px);
+  }
+  .ycd-my-categry-icon{
+       display:inline-block;
+       width:pxTorem(74px);
+       height:pxTorem(74px);
+       text-align: center;
+       line-height: pxTorem(74px);
+       font-size:pxTorem(60px);
+  }
+  .ycd-icon-dingdan{
+       color: #eca344;
+       font-size:pxTorem(75px);
+  }
+  .ycd-icon-hongbao{
+       color: #e35050;
+  }
+  .ycd-icon-dizhi{
+       color: #4f86e1;
+  }
+  .ycd-icon-mybounus{
+       color: #40a6db;
+       font-size:pxTorem(75px);
+  }
+  .ycd-icon-message{
+       color: #f7514e;
+  }
+  .ycd-icon-loginout{
+       color: #f58d49;
+  }
+  .ycd-icon-pingjia{
+       color: #f44f7e;
+       font-size:pxTorem(75px);
+  }
+  .ycd-my-categry-name{
+        width:100%;
+        text-align: center;
+        color:#454545;
+        font-family: "Microsoft YaHei";
+        font-size:pxTorem(24px);
+        display:inline-block;
+        padding-top:pxTorem(12px);
+  }
+}
+
+.ycd-my-user-op-list{
+  width:100%;
+  margin-top:pxTorem(12px);
+  background: #f5f5f5;
+  dl{
+      padding-left:pxTorem(25px);
+      border-bottom: pxTorem(1px) solid #969696;
+      &:active{
+          background: #55a533;
+          color:#fff;     
+          span.ycd-my-op-icon{
+           color:#fff;
+         }
+          dt{
+             color:#fff;
+          }
+          dd{
+            color:#fff;
+          }
+
+      }
+     a{
+        width:100%;
+        display: inline-block;
+        color:#98a5aa;
+        display:flex;
+        height:pxTorem(86px);
+        line-height: pxTorem(86px);
+
+
+        dt{
+           display: inline-block;
+           color:#000017;
+           font-size:pxTorem(32px);
+           margin-left:pxTorem(24px);
+        }
+        dd{
+           flex:1;
+           text-align: right;
+           padding-right: pxTorem(24px);
+           display: inline-block;
+           font-size:pxTorem(32px);
+        }
+        span.ycd-my-op-icon{
+          display: inline-block;
+          font-size:pxTorem(30px);
+          line-height: pxTorem(86px);
+        }
+     }
+  }
+  dl:last-child{
+    border:none;
+  }
 }
