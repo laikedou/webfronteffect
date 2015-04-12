@@ -1,3 +1,6 @@
+body {
+  background: #ebebeb; }
+
 .ycd-header-search-box-top {
   background: rgba(85, 165, 51, 0.8); }
   .ycd-header-search-box-top .ycd-js-search-input-box {
@@ -31,7 +34,8 @@
     height: 9.75rem;
     position: relative;
     font-family: "Microsoft YaHei";
-    border-bottom: 1px solid #d6d7dc; }
+    border-bottom: 1px solid #d6d7dc;
+    background: #fff; }
     .yc-cart-list .yc-cart-list-item a.img {
       position: absolute;
       width: 7.45rem;
@@ -167,5 +171,211 @@
 .ycd-bottom-fixed-cart {
   width: 100%;
   height: 11rem; }
+
+div.top-lines {
+  width: 100%;
+  height: 0.6rem;
+  background: url(../images/lines_bg.jpg) repeat-x left top;
+  background-size: 100%;
+  margin-top: 4.5rem; }
+
+.ycd-ui-list-item, .ycd-ui-list-item-bd {
+  width: 100%;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  background: #fff;
+  color: #000; }
+  .ycd-ui-list-item a, .ycd-ui-list-item-bd a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 4.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #2b2b2b;
+    font-size: 1.2rem; }
+    .ycd-ui-list-item a span.ycd-ui-list-add-icon, .ycd-ui-list-item-bd a span.ycd-ui-list-add-icon {
+      display: inline-block;
+      width: 1.05rem;
+      height: 1.05rem;
+      background: url(../images/add_icon.png) no-repeat left top;
+      background-size: 100%;
+      margin: 1.75rem 1.2rem 0 1.2rem; }
+    .ycd-ui-list-item a dt, .ycd-ui-list-item-bd a dt {
+      display: inline-block;
+      color: #2b2b2b;
+      font-size: 1.6rem;
+      margin-left: 1.2rem; }
+    .ycd-ui-list-item a dd, .ycd-ui-list-item-bd a dd {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      text-align: right;
+      padding-right: 1.2rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      color: #adadad; }
+
+.ycd-ui-list-item-bd {
+  border-bottom: 1px solid #d6d7dc; }
+
+.bd-tp1 {
+  border-bottom: 1px solid #d6d7dc; }
+
+.col-green {
+  color: #55a533; }
+
+.col-gray {
+  color: #6e6e6e; }
+
+.col-red {
+  color: #eb2d29; }
+
+.rotate-y {
+  -webkit-transform: rotate(9deg);
+      -ms-transform: rotate(9deg);
+          transform: rotate(9deg); }
+
+.ycd-product-list .ycd-product-title {
+  width: 100%;
+  height: 2.35rem;
+  line-height: 2.35rem;
+  font-size: 1.2rem;
+  background: #fff;
+  text-indent: 1.2rem;
+  color: #2b2b2b; }
+.ycd-product-list .ycd-ui-list-item-bd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto; }
+  .ycd-product-list .ycd-ui-list-item-bd a {
+    height: 2.7rem;
+    line-height: 2.7rem;
+    padding: 1.6rem 1.2rem 1.6rem 2.05rem; }
+  .ycd-product-list .ycd-ui-list-item-bd img {
+    display: inline-block;
+    width: 1.5rem;
+    height: 2.7rem; }
+  .ycd-product-list .ycd-ui-list-item-bd dt {
+    display: inline-block; }
+  .ycd-product-list .ycd-ui-list-item-bd dt.title {
+    margin-left: 2.15rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .ycd-product-list .ycd-ui-list-item-bd dt.price {
+    margin-left: 6rem; }
+
+.ycd-product-total-price {
+  background: #fff;
+  color: #2b2b2b;
+  font-size: 1.6rem; }
+  .ycd-product-total-price p {
+    text-align: right;
+    padding: 0.5rem 0; }
+
+.regular-checkbox {
+  display: none; }
+
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: 0.05rem solid #cacece;
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.05), inset 0px -pxTorem(15px) 0.5rem -pxTorem(12px) rgba(0, 0, 0, 0.05);
+  padding: 0.45rem;
+  border-radius: 0.15rem;
+  display: inline-block;
+  position: relative; }
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.05), inset 0px 0.05rem 0.15rem rgba(0, 0, 0, 0.1); }
+
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+  border: 0.05rem solid #adb8c0;
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.05), inset 0px -pxTorem(15px) 0.5rem -pxTorem(12px) rgba(0, 0, 0, 0.05), inset 0.75rem 0.5rem -pxTorem(12px) rgba(255, 255, 255, 0.1);
+  color: #99a1a7; }
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 0.7rem;
+  position: absolute;
+  top: 0px;
+  left: 0.15rem;
+  color: #99a1a7; }
+
+.big-checkbox + label {
+  padding: 0.9rem; }
+
+.big-checkbox:checked + label:after {
+  font-size: 1.4rem;
+  left: 0.3rem; }
+
+.tag {
+  font-family: Arial, sans-serif;
+  width: 10rem;
+  position: relative;
+  top: 0.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  float: left; }
+
+.radio-1 {
+  width: 9.65rem; }
+
+.button-holder {
+  float: left; }
+
+/* RADIO */
+.regular-radio {
+  display: none; }
+
+.regular-radio + label {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 0.05rem solid #cacece;
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.05), inset 0px -pxTorem(15px) 0.5rem -pxTorem(12px) rgba(0, 0, 0, 0.05);
+  padding: 0.45rem;
+  border-radius: 2.5rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.75rem; }
+
+.regular-radio:checked + label:after {
+  content: ' ';
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 2.5rem;
+  position: absolute;
+  top: 0.15rem;
+  background: #55a533;
+  box-shadow: inset 0px 0px 0.5rem rgba(0, 0, 0, 0.3);
+  text-shadow: 0px;
+  left: 0.15rem;
+  font-size: 1.6rem; }
+
+.regular-radio:checked + label {
+  background-color: #e9ecee;
+  color: #55a533;
+  border: 0.05rem solid #adb8c0;
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.05), inset 0px -pxTorem(15px) 0.5rem -pxTorem(12px) rgba(0, 0, 0, 0.05), inset 0.75rem 0.5rem -pxTorem(12px) rgba(255, 255, 255, 0.1), inset 0px 0px 0.5rem rgba(0, 0, 0, 0.1); }
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+  box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.05), inset 0px 0.05rem 0.15rem rgba(0, 0, 0, 0.1); }
+
+.big-radio + label {
+  padding: 0.8rem; }
+
+.big-radio:checked + label:after {
+  width: 1.2rem;
+  height: 1.2rem;
+  left: 0.2rem;
+  top: 0.2rem; }
 
 /*# sourceMappingURL=cart.css.map */

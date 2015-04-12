@@ -5,6 +5,10 @@ $calc-width:'-webkit-calc(100% - 1rem)';
 @function pxTorem($px) {
 	@return $px / $browser-default-font-size *1rem;
 }
+body{
+  background:#ebebeb;
+}
+
 .ycd-header-search-box-top{
 	background:rgba(85, 165, 51, 0.8);
 	.ycd-js-search-input-box{  
@@ -40,6 +44,7 @@ $calc-width:'-webkit-calc(100% - 1rem)';
     	position: relative;
     	font-family: "Microsoft YaHei";
     	border-bottom:1px solid #d6d7dc;
+      background: #fff;
     	a.img{
     		position: absolute;
     		width:pxTorem(149px);
@@ -204,4 +209,235 @@ $calc-width:'-webkit-calc(100% - 1rem)';
 .ycd-bottom-fixed-cart{
 	width:100%;
 	height:pxTorem(220px);
+}
+div.top-lines{
+  width:100%;
+  height:pxTorem(12px);
+  background: url(../images/lines_bg.jpg) repeat-x left top;
+  background-size:100%;
+  margin-top:pxTorem(90px);
+}
+.ycd-ui-list-item,.ycd-ui-list-item-bd{
+  width:100%;
+  height:pxTorem(90px);
+  line-height: pxTorem(90px);
+  background: #fff;
+  color:#000;
+  a{
+     display:inline-block;
+     width:100%;
+     height:100%;
+     line-height: pxTorem(90px);
+     display:flex;
+     color:#2b2b2b;
+     font-size:pxTorem(24px);
+     span.ycd-ui-list-add-icon{
+       display:inline-block;
+       width:pxTorem(21px);
+       height:pxTorem(21px);
+       background: url(../images/add_icon.png) no-repeat left top;
+       background-size:100%;
+       margin:pxTorem(35px) pxTorem(24px) 0 pxTorem(24px);
+     }
+      dt{
+           display: inline-block;
+           color:#2b2b2b;
+           font-size:pxTorem(32px);
+           margin-left:pxTorem(24px);
+        }
+        
+        dd{
+           flex:1;
+           text-align: right;
+           padding-right: pxTorem(24px);
+           display: inline-block;
+           font-size:pxTorem(32px);
+           color:#adadad;
+        }
+  }
+}
+.ycd-ui-list-item-bd{
+  border-bottom:1px solid #d6d7dc;
+}
+.bd-tp1{
+   border-bottom:1px solid #d6d7dc;
+}
+.col-green{
+  color:#55a533;
+}
+.col-gray{
+  color:#6e6e6e;
+}
+.col-red{
+  color:#eb2d29;
+}
+.rotate-y{
+  transform:rotate(9deg);
+}
+.ycd-product-list{
+   .ycd-product-title{
+    width:100%;
+    height:pxTorem(47px);
+    line-height: pxTorem(47px);
+    font-size:pxTorem(24px);
+    background: #fff;
+    text-indent: pxTorem(24px);
+    color:#2b2b2b;
+
+   }
+   .ycd-ui-list-item-bd{
+         display: flex;
+         height:auto;
+         a{
+          height:pxTorem(54px);
+          line-height: pxTorem(54px);
+          padding:pxTorem(32px) pxTorem(24px) pxTorem(32px) pxTorem(41px);
+         }
+        img{
+          display:inline-block;
+          width:pxTorem(30px);
+          height:pxTorem(54px);
+
+        }
+        dt{
+          display: inline-block;
+        }
+        dt.title{
+          margin-left:pxTorem(43px);
+          flex:1;
+        }
+        dt.amount{
+           
+        }
+        dt.price{
+           margin-left:pxTorem(120px);
+        }
+
+   }
+}
+.ycd-product-total-price{
+  background: #fff;
+  color:#2b2b2b;
+  font-size:pxTorem(32px);
+  p{
+    text-align: right;
+    padding:pxTorem(10px) 0; 
+  }
+}
+
+.regular-checkbox {
+  display: none;
+}
+
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: pxTorem(1px) solid #cacece;
+  box-shadow: 0 pxTorem(1px) pxTorem(2px) rgba(0,0,0,0.05), inset 0px -pxTorem(15px) pxTorem(10px) -pxTorem(12px) rgba(0,0,0,0.05);
+  padding: pxTorem(9px);
+  border-radius: pxTorem(3px);
+  display: inline-block;
+  position: relative;
+}
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  box-shadow: 0 pxTorem(1px) pxTorem(2px) rgba(0,0,0,0.05), inset 0px pxTorem(1px) pxTorem(3px) rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+  border: pxTorem(1px) solid #adb8c0;
+  box-shadow: 0 pxTorem(1px) pxTorem(2px) rgba(0,0,0,0.05), inset 0px -pxTorem(15px) pxTorem(10px) -pxTorem(12px) rgba(0,0,0,0.05), inset pxTorem(15px) pxTorem(10px) -pxTorem(12px) rgba(255,255,255,0.1);
+  color: #99a1a7;
+}
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: pxTorem(14px);
+  position: absolute;
+  top: 0px;
+  left: pxTorem(3px);
+  color: #99a1a7;
+}
+
+
+.big-checkbox + label {
+  padding: pxTorem(18px);
+}
+
+.big-checkbox:checked + label:after {
+  font-size: pxTorem(28px);
+  left: pxTorem(6px);
+}
+
+.tag {
+  font-family: Arial, sans-serif;
+  width: pxTorem(200px);
+  position: relative;
+  top: pxTorem(5px);
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+}
+
+.radio-1 {
+  width: pxTorem(193px);
+}
+
+.button-holder {
+  float: left;
+}
+
+/* RADIO */
+
+.regular-radio {
+  display: none;
+}
+
+.regular-radio + label {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: pxTorem(1px) solid #cacece;
+  box-shadow: 0 pxTorem(1px) pxTorem(2px) rgba(0,0,0,0.05), inset 0px -pxTorem(15px) pxTorem(10px) -pxTorem(12px) rgba(0,0,0,0.05);
+  padding: pxTorem(9px);
+  border-radius: pxTorem(50px);
+  display: inline-block;
+  position: relative;
+  margin-right: pxTorem(15px);
+}
+
+.regular-radio:checked + label:after {
+  content: ' ';
+  width: pxTorem(12px);
+  height: pxTorem(12px);
+  border-radius: pxTorem(50px);
+  position: absolute;
+  top: pxTorem(3px);
+  background: #55a533;
+  box-shadow: inset 0px 0px pxTorem(10px) rgba(0,0,0,0.3);
+  text-shadow: 0px;
+  left: pxTorem(3px);
+  font-size: pxTorem(32px);
+}
+
+.regular-radio:checked + label {
+  background-color: #e9ecee;
+  color: #55a533;
+  border: pxTorem(1px) solid #adb8c0;
+  box-shadow: 0 pxTorem(1px) pxTorem(2px) rgba(0,0,0,0.05), inset 0px -pxTorem(15px) pxTorem(10px) -pxTorem(12px) rgba(0,0,0,0.05), inset pxTorem(15px) pxTorem(10px) -pxTorem(12px) rgba(255,255,255,0.1), inset 0px 0px pxTorem(10px) rgba(0,0,0,0.1);
+}
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+  box-shadow: 0 pxTorem(1px) pxTorem(2px) rgba(0,0,0,0.05), inset 0px pxTorem(1px) pxTorem(3px) rgba(0,0,0,0.1);
+}
+
+.big-radio + label {
+  padding: pxTorem(16px);
+}
+
+.big-radio:checked + label:after {
+  width: pxTorem(24px);
+  height: pxTorem(24px);
+  left: pxTorem(4px);
+  top: pxTorem(4px);
 }
