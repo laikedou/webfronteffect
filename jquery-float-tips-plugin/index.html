@@ -2,7 +2,31 @@
 <head>
 	<meta charset="utf-8">
 	<title> 个性化jquery 右下角弹窗插件</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.tips.css">
 </head>
 <body>
-	
+    <div class="jq-tips-wrapper">
+    	     <div class="jq-tips-header">
+    	            <h2>活动公告:</h2>
+    	     	   <span class="jq-tips-mini">缩小</span>
+    	     	   <span class="jq-tips-close">关闭</span>
+    	     </div>
+    	     <div class="jq-tips-content">
+    	     	  <div class="jq-tips-content-inner">
+    	     	  	辞旧迎新过新年，客家欢乐迎新年！
+    	     	  </div>
+    	     </div>
+    	     <div class="jq-tips-content-bottom">
+    	     	
+    	     </div>
+    </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.tips.js"></script>
+	<script>
+         $(document).ready(function(){
+                $('.jq-tips-wrapper').tips({
+                	  debugmode :true
+                });
+         });
+	</script>
 </body>
