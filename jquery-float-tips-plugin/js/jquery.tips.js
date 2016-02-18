@@ -1,7 +1,7 @@
 (function($){
   $.fn.tips=function(options){
        
-       var opts = $.extend({}, $.fn.tips.default, options);
+       var opts = $.extend({}, $.fn.tips.defaultOpt, options);
        var $this = $(this);
        var _header = $this.find('.jq-tips-header');
        var _content = $this.find('.jq-tips-content');
@@ -43,6 +43,14 @@
        		 y:d.body.scrollTop
        	}
        }
+       function onHeaderDown(e){
+       	 e = e || window.event;
+       	 drag = true;
+       }
+       function onHeaderOut(e){
+       	 e = e || window.event;
+       	 drag = false;
+       }
        function drag(event){
        	      event = event || window.event;
               var drag = true;
@@ -59,12 +67,8 @@
               if(document.addEventListener){
               	document.addEventListener('mousemove',moveHandler,true);
               	document.addEventListener('mouseup',upHandler,true);
-              	drag_header.addEventListener('mouseout',function(e){
-                        drag = false;
-              	});
-              	drag_header.addEventListener('mousedown',function(e){
-              		    drag = true;
-              	});
+              	drag_header.addEventListener('mouseout',onHeaderOut);
+              	drag_header.addEventListener('mousedown',onHeaderDown);
               }else if(document.attachEvent){
               	//捕获事件
               	elementToDrag.setCapture();
@@ -103,10 +107,14 @@
                 if(document.removeEventListener){
                 	  document.removeEventListener('mousemove', moveHandler);
                 	  document.removeEventListener('mouseup', upHandler);
+					  drag_header.removeEventListener('mouseout',onHeaderOut);
+					  drag_header.removeEventListener('mousedown',onHeaderDown);
                 }else if(document.detachEvent){
                 	  document.detachEvent('onlosecapture',upHandler);
                 	  document.detachEvent('onmouseup',upHandler);
                 	  document.detachEvent('onmousemove',moveHandler);
+                	  drag_header.detachEvent('onmouseout',onHeaderOut);
+					  drag_header.detachEvent('onmousedown',onHeaderDown);
                 	  elementToDrag.releaseCapture();
                 	  if(event.stopPropagation) event.stopPropagation();
                       else event.cancelBubble = true;
@@ -135,19 +143,16 @@
        });
        
   }
-
   function debug(info){
      try {
-     	// statements
      	if(window.console&&window.console.log){
            console.log(info);
      	}
      } catch(e) {
-     	// statements
      	alert(info);
      }
   }
-  $.fn.tips.default = {
+  $.fn.tips.defaultOpt = {
   	 isshowcolsebtn:true,
   	 canminum:true,
   	 debugmode:false,
