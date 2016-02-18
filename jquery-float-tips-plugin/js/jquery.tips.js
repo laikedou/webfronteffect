@@ -123,7 +123,15 @@
            $this.fadeOut(500);
        });
        _min_btn.click(function(e){
-       	   _content.toggle('slow')
+       	   if($(_content).height() == 130){
+              _content.stop(true).animate({
+                  	'height': '0px'},
+                  	500);
+       	   }else{
+       	   	_content.stop(true).animate({
+                  	'height': '130px'},
+                  	500);
+       	   }
        });
        
   }
