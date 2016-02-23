@@ -156,6 +156,6 @@
   	 isshowcolsebtn:true,
   	 canminum:true,
   	 debugmode:false,
-  	 candrag:true
+  	 candrag:false
   };
 })(jQuery)
