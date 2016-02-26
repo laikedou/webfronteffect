@@ -1,0 +1,103 @@
+html {
+  font-size: 20px;
+  color: #999;
+  height: 100%;
+  width: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #f0f5f2; }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/font_1456476471_9418604.eot");
+  /* IE9*/
+  src: url("//at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("//at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("//at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
+[class^=ycd-font-icon] {
+  display: inline-block;
+  font-family: 'iconfont';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  font-variant: normal;
+  line-height: 1;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ycd-bottom {
+  font-size: 0.7rem;
+  height: 2.5rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background: #f8faf7; }
+
+.ycd-bottom .ycd-foot-tab {
+  display: inline-block;
+  width: 23%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden; }
+
+.ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #999; }
+
+.ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a-cur {
+  color: #1db489; }
+
+.ycd-bottom .ycd-foot-tab .ycd-foot-icon {
+  margin-top: 0.35rem; }
+
+.ycd-bottom .ycd-foot-tab .ycd-foot-tab-name {
+  margin-top: 0.3rem;
+  font-size: 0.55rem; }
+
+.ycd-header-search-box-top {
+  width: -webkit-calc(100% - 1rem);
+  padding: 0.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.ycd-header-search-box-top .ycd-location-txt {
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.5rem;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: 700; }
+
+.ycd-header-search-box-top .ycd-js-search-input-box {
+  display: inline-block;
+  width: 12.55rem;
+  height: 100%;
+  position: relative; }
+
+.ycd-js-search-input {
+  border-radius: 0.9rem;
+  width: 100%;
+  line-height: 0.9rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.6rem;
+  position: relative; }
+
+.ycd-js-search-icon {
+  position: absolute;
+  font-size: 0.7rem;
+  top: 0.2rem;
+  right: 0.55rem; }
+
+.ycd-gradient-top-bg {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); }
+
+/*# sourceMappingURL=ycaidao.css.map */

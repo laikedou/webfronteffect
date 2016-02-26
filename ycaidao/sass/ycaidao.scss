@@ -1,0 +1,116 @@
+$browser-default-font-size:20px !default;
+$default-font-color:#999;
+$header-top-offset:pxTorem(20px);
+html{
+	font-size:$browser-default-font-size;
+	color:$default-font-color;
+	height:100%;
+	width:100%;
+}
+body{
+	width:100%;
+	height:100%;
+	background: #f0f5f2;
+}
+@function pxTorem($px) {
+	
+	@return $px / $browser-default-font-size *1rem;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1456476471_9418604.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1456476471_9418604.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1456476471_9418604.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1456476471_9418604.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1456476471_9418604.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+[class ^= ycd-font-icon]{
+	display:inline-block;
+	font-family: 'iconfont';
+	font-style: normal;
+	font-weight: 400;
+	text-transform: none;
+	font-variant: normal;
+	line-height: 1;
+	font-size:pxTorem(20px);
+	//让字体变清晰
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.ycd-bottom{
+	font-size:pxTorem(14px);
+	height:pxTorem(50px);
+	width:100%;
+	position: fixed;
+	bottom:0px;
+	left:0px;
+	background: #f8faf7;
+}
+.ycd-bottom .ycd-foot-tab{
+	display:inline-block;
+	width:23%;
+	height:100%;
+	text-align: center;
+	overflow: hidden;
+} 
+.ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a{
+  display:inline-block;
+  width:100%;
+  height:100%;
+  color:$default-font-color;
+}
+.ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a-cur{
+	color:#1db489;
+}
+.ycd-bottom .ycd-foot-tab .ycd-foot-icon{
+   margin-top:pxTorem(7px);
+}
+.ycd-bottom .ycd-foot-tab .ycd-foot-tab-name{
+	margin-top:pxTorem(6px);
+	font-size: pxTorem(11px);
+}
+
+.ycd-header-search-box-top{
+	width:-webkit-calc(100% - 1rem);
+	padding:pxTorem(10px);
+	height:pxTorem(30px);
+	position:absolute;
+	left:0;
+	top:0;
+}
+.ycd-header-search-box-top .ycd-location-txt{
+	display: inline-block;
+	width:pxTorem(48px);
+	height:pxTorem(30px);
+	line-height: pxTorem(20px);
+	text-align: center;
+	font-size:pxTorem(14px);
+	color:#fff;
+	font-weight: 700;
+}
+.ycd-header-search-box-top .ycd-js-search-input-box{
+	display: inline-block;
+	width:pxTorem(251px);
+	height:100%;
+	position: relative;
+}
+.ycd-js-search-input{
+    border-radius: pxTorem(18px);
+    width:100%;
+    line-height:pxTorem(18px);
+    padding:pxTorem(3px) pxTorem(10px);
+    font-size:pxTorem(12px);
+    position: relative;
+}
+.ycd-js-search-icon{
+   position:absolute;
+   font-size:pxTorem(14px);
+   top:pxTorem(4px);
+   right:pxTorem(11px);
+
+}
+.ycd-gradient-top-bg{
+	background: -webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0));
+}

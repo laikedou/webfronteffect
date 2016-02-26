@@ -1,0 +1,104 @@
+$browser-default-font-size:16px !default;
+$default-font-color:#999;
+html{
+	font-size:$browser-default-font-size;
+	color:$default-font-color;
+	height:100%;
+	width:100%;
+}
+body{
+	width:100%;
+	height:100%;
+	background: #f0f5f2;
+}
+@function pxTorem($px) {
+	
+	@return $px / $browser-default-font-size *1rem;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1456466199_297861.eot'); 
+  src: url('http://at.alicdn.com/t/font_1456466199_297861.eot?#iefix') format('embedded-opentype'), 
+  url('http://at.alicdn.com/t/font_1456466199_297861.woff') format('woff'), 
+  url('http://at.alicdn.com/t/font_1456466199_297861.ttf') format('truetype'), 
+  url('http://at.alicdn.com/t/font_1456466199_297861.svg#iconfont') format('svg');  
+}
+[class ^= ycd-font-icon]{
+	display:inline-block;
+	font-family: 'iconfont';
+	font-style: normal;
+	font-weight: 400;
+	text-transform: none;
+	font-variant: normal;
+	line-height: 1;
+	font-size:pxTorem(20px);
+	//让字体变清晰
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.ycd-bottom{
+	font-size:pxTorem(14px);
+	height:pxTorem(50px);
+	width:100%;
+	position: fixed;
+	bottom:0px;
+	left:0px;
+	background: #f8faf7;
+}
+.ycd-bottom .ycd-foot-tab{
+	display:inline-block;
+	width:23%;
+	height:100%;
+	text-align: center;
+	overflow: hidden;
+} 
+.ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a{
+  display:inline-block;
+  width:100%;
+  height:100%;
+  color:$default-font-color;
+}
+.ycd-bottom .ycd-foot-tab a.ycd-foot-tab-a-cur{
+	color:#1db489;
+}
+.ycd-bottom .ycd-foot-tab .ycd-foot-icon{
+   margin-top:pxTorem(7px);
+}
+.ycd-bottom .ycd-foot-tab .ycd-foot-tab-name{
+	margin-top:pxTorem(6px);
+}
+
+.ycd-header-search-box-top{
+	padding:8px 10px;
+	height:30px;
+	position:absolute;
+	left:0;
+	top:0;
+	display:flex;
+	width:-webkit-calc(100% - 20px)
+}
+.ycd-header-search-box-top .ycd-location-txt{
+	display: inline-block;
+	height:100%;
+	line-height: 30px;
+	text-align: center;
+	font-size:pxTorem(14px);
+	font-weight:700px;
+	color:#fff;
+	padding:0px 10px 0px 2px;
+}
+.ycd-header-search-box-top .ycd-js-search-input-box{
+	display: inline-block;
+	height:100%;
+	flex:1;
+}
+.ycd-js-search-input{
+	width:100%;
+	height:100%;
+	border-radius:18px;
+	background:#fff;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	padding:3px 10px;
+	line-height: 18px;
+}
