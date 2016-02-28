@@ -113,7 +113,8 @@ body {
   right: 0.55rem; }
 
 .ycd-gradient-top-bg {
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); }
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent);
+  background: linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); }
 
 .ycd-header-search-box {
   position: absolute; }
