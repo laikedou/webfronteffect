@@ -7,13 +7,13 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background: #f0f5f2; }
+  background: #fff; }
 
 @font-face {
   font-family: 'iconfont';
   src: url("//at.alicdn.com/t/font_1456476471_9418604.eot");
   /* IE9*/
-  src: url("//at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("//at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("//at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("//at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("//at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg")
   /* iOS 4.1- */ }
 [class^=ycd-font-icon] {
   display: inline-block;
@@ -34,11 +34,18 @@ body {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background: #f8faf7; }
+  background: #eae9e9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .ycd-bottom .ycd-foot-tab {
   display: inline-block;
-  width: 23%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   text-align: center;
   overflow: hidden; }
@@ -60,12 +67,17 @@ body {
   font-size: 0.55rem; }
 
 .ycd-header-search-box-top {
-  width: -webkit-calc(100% - 1rem);
+  width: calc(100% - 1rem);
   padding: 0.5rem;
   height: 1.5rem;
   position: absolute;
   left: 0;
-  top: 0; }
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 99; }
 
 .ycd-header-search-box-top .ycd-location-txt {
   display: inline-block;
@@ -75,13 +87,16 @@ body {
   text-align: center;
   font-size: 0.7rem;
   color: #fff;
-  font-weight: 700; }
+  font-weight: 400; }
 
 .ycd-header-search-box-top .ycd-js-search-input-box {
   display: inline-block;
-  width: 12.55rem;
   height: 100%;
-  position: relative; }
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .ycd-js-search-input {
   border-radius: 0.9rem;
@@ -99,5 +114,88 @@ body {
 
 .ycd-gradient-top-bg {
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); }
+
+.ycd-header-search-box {
+  position: absolute; }
+
+.ycd-header-search-result {
+  position: absolute; }
+
+.ycd-index-categry-list {
+  width: calc(100% -1.75rem);
+  padding: 1.6rem 1.75rem;
+  height: 7.1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.ycd-index-categry-list .ycd-index-categry-item {
+  width: 5.6rem;
+  height: 5.6rem;
+  margin-right: 2.1rem; }
+
+.ycd-index-categry-list .ycd-index-categry-item:last-child {
+  margin-right: 0rem; }
+
+.ycd-index-categry-list .ycd-index-categry-item img {
+  display: inline-block;
+  width: 100%; }
+
+.ycd-index-categry-list .ycd-index-categry-name {
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "Microsoft YaHei";
+  font-size: 0.9rem;
+  display: inline-block;
+  padding-top: 0.6rem; }
+
+.ycd-floor {
+  width: 100%; }
+
+.ycd-floor img {
+  width: 100%; }
+
+.ycd-floor .ycd-floor-1 {
+  height: 9.4rem; }
+
+.ycd-floor .ycd-floor-name {
+  height: 2.75rem; }
+
+.ycd-floor-name h2 {
+  width: 4.4rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  color: #000;
+  font-size: 1rem;
+  margin-left: 0.75rem;
+  display: inline-block; }
+
+.ycd-floor-name .ycd-more {
+  font-size: 0.8rem;
+  color: #9c9c9c;
+  text-align: center;
+  display: inline-block;
+  margin-right: 1rem;
+  height: 100%;
+  float: right;
+  margin-top: 1.2rem; }
+
+.ycd-floor-goods-area {
+  padding: 0.9rem;
+  width: calc(100% - 1.8rem);
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.ycd-floor-goods-area img {
+  width: 100%; }
 
 /*# sourceMappingURL=ycaidao.css.map */

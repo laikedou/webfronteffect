@@ -1,0 +1,74 @@
+.ycd-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.ycd-slider-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: left; }
+
+.ycd-slider-ks-ts {
+  -webkit-transition: 500ms;
+          transition: 500ms; }
+
+.ycd-slider-wrap {
+  width: 100%; }
+
+.ycd-ks-wt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0.25rem;
+  margin-left: -50%; }
+
+.ycd-slider .ycd-ks-wt li {
+  background: -webkit-linear-gradient(top, #AAAAAA 0%, #979797 100%);
+  background: linear-gradient(top, #AAAAAA 0%, #979797 100%);
+  color: #fff;
+  text-align: center; }
+
+.yc-slider-wt2 .ycd-ks-wt li {
+  width: 0.5rem;
+  height: 0.5rem;
+  text-indent: 1rem;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0.25rem;
+  background: -webkit-linear-gradient(top, #e7e7e7 0%, #dfdfdf 100%);
+  background: linear-gradient(top, #e7e7e7 0%, #dfdfdf 100%); }
+
+.yc-slider-wt2 .ycd-ks-wt li.ycd-ks-t2 {
+  background: -webkit-linear-gradient(top, #AAAAAA 0%, #979797 100%);
+  background: linear-gradient(top, #AAAAAA 0%, #979797 100%);
+  -webkit-animation: kt2 500ms linear;
+          animation: kt2 500ms linear; }
+
+@-webkit-keyframes kt2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); } }
+
+@keyframes kt2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); } }
+
+/*# sourceMappingURL=slider.css.map */

@@ -1,6 +1,7 @@
 $browser-default-font-size:20px !default;
 $default-font-color:#999;
 $header-top-offset:pxTorem(20px);
+$calc-width:'-webkit-calc(100% - 1rem)';
 html{
 	font-size:$browser-default-font-size;
 	color:$default-font-color;
@@ -10,7 +11,7 @@ html{
 body{
 	width:100%;
 	height:100%;
-	background: #f0f5f2;
+	background: #fff;
 }
 @function pxTorem($px) {
 	
@@ -46,11 +47,12 @@ body{
 	position: fixed;
 	bottom:0px;
 	left:0px;
-	background: #f8faf7;
+	background: #eae9e9;
+	display: flex;
 }
 .ycd-bottom .ycd-foot-tab{
 	display:inline-block;
-	width:23%;
+	flex:1;
 	height:100%;
 	text-align: center;
 	overflow: hidden;
@@ -73,12 +75,14 @@ body{
 }
 
 .ycd-header-search-box-top{
-	width:-webkit-calc(100% - 1rem);
+	 width:calc(100% - 1rem);
 	padding:pxTorem(10px);
 	height:pxTorem(30px);
 	position:absolute;
 	left:0;
 	top:0;
+	display:flex;
+	z-index: 99;
 }
 .ycd-header-search-box-top .ycd-location-txt{
 	display: inline-block;
@@ -88,13 +92,13 @@ body{
 	text-align: center;
 	font-size:pxTorem(14px);
 	color:#fff;
-	font-weight: 700;
+	font-weight: 400;
 }
 .ycd-header-search-box-top .ycd-js-search-input-box{
 	display: inline-block;
-	width:pxTorem(251px);
 	height:100%;
 	position: relative;
+	flex:1;
 }
 .ycd-js-search-input{
     border-radius: pxTorem(18px);
@@ -113,4 +117,78 @@ body{
 }
 .ycd-gradient-top-bg{
 	background: -webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0));
+}
+.ycd-header-search-box{
+	position:absolute;
+}
+.ycd-header-search-result{
+	position: absolute;
+}
+.ycd-index-categry-list{
+	width:calc(100% -1.75rem);
+	padding:pxTorem(32px) pxTorem(35px);
+	height:pxTorem(142px);
+	display:flex;
+	justify-content:center;
+}
+.ycd-index-categry-list .ycd-index-categry-item{
+      width:pxTorem(112px);
+      height:pxTorem(112px);
+      margin-right:pxTorem(42px);
+}
+.ycd-index-categry-list .ycd-index-categry-item:last-child{
+	margin-right:pxTorem(0px);
+}
+.ycd-index-categry-list .ycd-index-categry-item img{
+	display:inline-block;
+	width:100%;
+}
+.ycd-index-categry-list .ycd-index-categry-name{
+      width:100%;
+      text-align: center;
+      color:#000;
+      font-family: "Microsoft YaHei";
+      font-size:pxTorem(18px);
+      display:inline-block;
+      padding-top:pxTorem(12px);
+}
+.ycd-floor{
+	width:100%;
+}
+.ycd-floor img{
+	width:100%;
+}
+.ycd-floor .ycd-floor-1{
+      height:pxTorem(188px);
+}
+.ycd-floor .ycd-floor-name{
+	height:pxTorem(55px);
+}
+.ycd-floor-name h2{
+    width:pxTorem(88px);
+    height:pxTorem(55px);
+    line-height:pxTorem(55px);
+    color:#000;
+    font-size:pxTorem(20px);
+    margin-left:pxTorem(15px);
+    display:inline-block;
+}
+.ycd-floor-name .ycd-more{
+    font-size:pxTorem(16px);
+    color:#9c9c9c;
+    text-align:center;
+    display:inline-block;
+    margin-right:pxTorem(20px);
+    height:100%;
+    float:right;
+    margin-top:pxTorem(24px);
+}
+.ycd-floor-goods-area{
+	padding:pxTorem(18px);
+	width:calc(100% - 1.8rem);
+	height:auto;
+	display: flex;
+}
+.ycd-floor-goods-area img{
+	width:100%;
 }

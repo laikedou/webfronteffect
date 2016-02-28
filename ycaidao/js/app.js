@@ -1,9 +1,10 @@
-(function(win,doc){
+(function(win,doc,$){
 	var resizeEvt = 'orientationchange' in win ? 'orientationchange' :'resize';
 	var docEl = doc.documentElement;
 	var onDeviceResize = function(){
          
-        docEl.style.fontSize = 20 * (docEl.clientWidth/320) +'px';
+        docEl.style.fontSize = 20 * (docEl.clientWidth/640) +'px';
+         $('.ycd-slider-wrap img').height(docEl.clientWidth*(320/640));
 	}
 	win.addEventListener(resizeEvt, onDeviceResize,false);
 	doc.addEventListener('DOMContentLoaded', onDeviceResize,false);
@@ -15,7 +16,7 @@
  	};*/
 	
 
-})(window,document);
+})(window,document,Zepto);
 
 //网站公共js部分
 Zepto(function($){
@@ -32,7 +33,7 @@ Zepto(function($){
               tab_icon.html(data_current);
     	 }
     });
-    foot_tabs.on('click',function(event){
+    foot_tabs.tap(function(event){
     	    $('.ycd-foot-tab > a').removeClass('ycd-foot-tab-a-cur');
     	    $(this).find('a').addClass('ycd-foot-tab-a-cur');
 		    $('.ycd-foot-tab').forEach( function(tab, index) {
@@ -47,5 +48,8 @@ Zepto(function($){
 		    });
 
     });
-    
+
+    //调用slider组建
+    $("#ycd-header-banner").slider({tick: 3000 });
+   
 });
