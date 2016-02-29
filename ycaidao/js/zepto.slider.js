@@ -1,3 +1,9 @@
+/**
+ * [基于zepto的插件]
+ * @AuthorHTL  laike
+ * @DateTime  2016-02-29T11:48:41+0800
+ * @param     {}                 $ [插件配置信息 对象格式]
+ */
 (function($){
 	  $.fn.slider=function(opts){
            var _options = $.extend({},$.fn.slider.defaultOpt,opts),
@@ -7,6 +13,7 @@
            _title = _self.find('.ycd-ks-wt'),
            m = {initX:0,initY:0,startX:0,startY:0,endX:0,canmove:false},
            currentTab=0;
+           //_target.css({width:document.documentElement.clientWidth *5});
            //切换当前的轮播样式 第一种是tab 第二种是带圆点的轮播
            _self.toggleClass(_options.className,true);//进行强制切换
            //如果设定了maxwidth 和minwidth 那么进行设定
