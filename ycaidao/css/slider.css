@@ -29,7 +29,9 @@
 .ycd-slider .ycd-ks-wt li {
   text-align: center;
   list-style: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#979797));
   background: -webkit-linear-gradient(top, #aaaaaa 0%, #979797 100%);
+  background: linear-gradient(top, #aaaaaa 0%, #979797 100%);
   color: #fff; }
 
 .yc-slider-wt1 .ycd-ks-wt li {

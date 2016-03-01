@@ -32,7 +32,7 @@ $browser-default-font-size:20px !default;
 .ycd-slider .ycd-ks-wt li{
 	text-align:center;
 	list-style:none;
-	background: -webkit-linear-gradient(top, #AAAAAA 0%,#979797 100%);
+	background: linear-gradient(top, #AAAAAA 0%,#979797 100%);
 	color: #fff;
 }
 .yc-slider-wt1 .ycd-ks-wt li{
@@ -49,8 +49,7 @@ $browser-default-font-size:20px !default;
       overflow: hidden;
       border-radius: 100%;
       margin:pxTorem(5px);
-  }
-
+}
 .yc-slider-wt1 .ycd-ks-wt .ycd-ks-t2{
 	background:linear-gradient(top, #e7e7e7 0%,#dfdfdf 100%); 
 	color:#000;

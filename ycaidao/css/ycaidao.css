@@ -13,9 +13,9 @@ body {
 
 @font-face {
   font-family: 'iconfont';
-  src: url("//at.alicdn.com/t/font_1456476471_9418604.eot");
+  src: url("http://at.alicdn.com/t/font_1456476471_9418604.eot");
   /* IE9*/
-  src: url("//at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("//at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("//at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg");
+  src: url("http://at.alicdn.com/t/font_1456476471_9418604.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1456476471_9418604.woff") format("woff"), url("http://at.alicdn.com/t/font_1456476471_9418604.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1456476471_9418604.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
 [class^=ycd-font-icon] {
   display: inline-block;

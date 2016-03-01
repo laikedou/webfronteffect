@@ -11,7 +11,6 @@
 	var resizeEvt = 'orientationchange' in win ? 'orientationchange' :'resize';
 	var docEl = doc.documentElement;
 	var onDeviceResize = function(){
-         
         docEl.style.fontSize = 20 * (docEl.clientWidth/640) +'px';
         $('.ycd-slider-wrap img').height(docEl.clientWidth*(320/640));
         $('.ycd-js-search-icon').css({marginTop:-($('.ycd-js-search-icon').height()/2)});
@@ -24,8 +23,6 @@
 	var $$ = function(selector){
 		return document.querySelectorAll(selector);
  	};*/
-	
-
 })(window,document,Zepto);
 
 //网站公共js部分
@@ -83,6 +80,7 @@ Zepto(function($){
 	        url: url, 
 	        beforeSend: function(){ 
 	            $(".ycd-location-txt").html('正在定位...'); 
+	            alert('正在定位');
 	        }, 
 	        success: function (json) {  
 	            if(json.status==0){ 
