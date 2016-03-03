@@ -220,14 +220,15 @@ body {
     line-height: 0;
     display: inline-block; }
   .ycd-floor-goods-area .ycd-floor-goods-area-item {
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: relative;
     width: 14.3rem;
     height: 9.35rem;
     border: 1px solid #c9c9c9;
     margin-bottom: 0.5rem;
     font-family: "Microsoft YaHei"; }
-    .ycd-floor-goods-area .ycd-floor-goods-area-item:hover {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
     .ycd-floor-goods-area .ycd-floor-goods-area-item i {
       display: inline-block;
       width: 3.15rem;
@@ -278,5 +279,21 @@ body {
 @media screen and (max-width: 360px) {
   .ycd-floor-goods-area .ycd-floor-goods-area-item {
     width: 100%; } }
+.ycd-top-bg-animation {
+  background: rgba(33, 179, 135, 0.8);
+  -webkit-animation: bgChange 1000ms linear;
+          animation: bgChange 1000ms linear; }
+
+@-webkit-keyframes bgChange {
+  0% {
+    background: rgba(0, 0, 0, 0.2); }
+  100% {
+    background: rgba(33, 179, 135, 0.8); } }
+
+@keyframes bgChange {
+  0% {
+    background: rgba(0, 0, 0, 0.2); }
+  100% {
+    background: rgba(33, 179, 135, 0.8); } }
 
 /*# sourceMappingURL=ycaidao.css.map */

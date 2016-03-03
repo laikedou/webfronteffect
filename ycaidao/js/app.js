@@ -111,5 +111,29 @@ Zepto(function($){
     }
     //初始化定位
     //initGeolocation();
-   
+    //获取窗口滚动条的位置
+    function getScrollOffset(win){
+    	var w = w ||window;
+    	if(w.pageXOffset != null){
+           return {
+           	x:w.pageXOffset,
+           	y:w.pageYOffset
+           }
+    	}
+    }
+    function onTopBgColorChange(event){
+           	  var _page_offset = getScrollOffset();
+           	  var _y = _page_offset.y;
+           	  var _top_header_height = $('.ycd-header-search-box-top').height();
+           	  if(_y > _top_header_height){
+                 $('.ycd-header-search-box-top').css({top:_y}).addClass('ycd-top-bg-animation')
+           	  }else if(_y < _top_header_height){
+                 $('.ycd-header-search-box-top').css({top:_y}).removeClass('ycd-top-bg-animation')
+           	  }
+    }
+    window.addEventListener('scroll',onTopBgColorChange,false);
+
+    //后续函数会新增聚焦到搜索框隐藏顶部搜索栏位 显示搜索页面的效果
+    
+    
 });

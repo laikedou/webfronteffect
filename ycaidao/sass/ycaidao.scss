@@ -189,7 +189,15 @@ body{
     float:right;
     margin-top:pxTorem(24px);
 }
-
+ @keyframes goods-item-effect {
+   0% {
+     
+   }
+   100% {
+     
+   }
+ }
+ 
 .ycd-floor-goods-area{
 	padding:pxTorem(18px);
 	width:calc(100% - 1.8rem);
@@ -209,15 +217,17 @@ body{
 		display:inline-block;
 	}
 	.ycd-floor-goods-area-item{
+              transition:all .2s ease-in-out;
+              box-shadow: 0 0 20px rgba(0,0,0,0.1);
               &:hover{
-                  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                 
               }
               position: relative;
-		      width:pxTorem(286px);
-		      height:pxTorem(187px);
-		      border:1px solid #c9c9c9;
-		      margin-bottom:pxTorem(10px);
-		      font-family: "Microsoft YaHei";
+    		      width:pxTorem(286px);
+    		      height:pxTorem(187px);
+    		      border:1px solid #c9c9c9;
+    		      margin-bottom:pxTorem(10px);
+    		      font-family: "Microsoft YaHei";
               i{
               	display:inline-block;
               	width:pxTorem(63px);
@@ -247,7 +257,6 @@ body{
                 top:pxTorem(98px);
                 font-size: pxTorem(20px);
                 color:#767676;
-                
               }
               p.info{
               	     position: absolute;
@@ -287,3 +296,17 @@ body{
 		}
 	}
 }
+.ycd-top-bg-animation{
+  background:rgba(33, 179, 135, 0.8);
+  animation:bgChange 1000ms linear;
+}
+@keyframes bgChange {
+  0% {
+      background:rgba(0, 0, 0, 0.2);
+  }
+  100% {
+      background:rgba(33, 179, 135, 0.8);
+  }
+}
+//头部顶部固定导航效果
+
