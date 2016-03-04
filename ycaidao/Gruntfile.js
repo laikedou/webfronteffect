@@ -3,6 +3,11 @@ module.exports = function(grunt) {
   // 配置Grunt各种模块的参数
   grunt.initConfig({
     pkg:grunt.file.readJSON('package.json'),
+    meta: {
+            basePath: './',
+            srcPath: './sass/',
+            deployPath: './css/'
+    },
     jshint: { 
        all: [
             'js/*.js'
@@ -49,7 +54,18 @@ module.exports = function(grunt) {
         ]
         }
       }
+    },
+    sass:{
+            dist: {
+                files: {
+                    '<%= meta.deployPath %>*.css': '<%= meta.srcPath %>*.scss'
+                },
+                options: {
+                    sourcemap: 'false'
+                }
+            }
     }
+
   });
 
   // 从node_modules目录加载模块文件
@@ -58,7 +74,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-
+  //grunt.loadNpmTasks('grunt-contrib-sass');
   // 每行registerTask定义一个任务
   grunt.registerTask('default', [ 'concat', 'uglify','cssmin']);
   grunt.registerTask('check', ['jshint']);
