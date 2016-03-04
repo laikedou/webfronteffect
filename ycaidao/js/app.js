@@ -14,7 +14,7 @@
         docEl.style.fontSize = 20 * (docEl.clientWidth/640) +'px';
         $('.ycd-slider-wrap img').height(docEl.clientWidth*(320/640));
         $('.ycd-js-search-icon').css({marginTop:-($('.ycd-js-search-icon').height()/2)});
-	}
+	};
 	win.addEventListener(resizeEvt, onDeviceResize,false);
 	doc.addEventListener('DOMContentLoaded', onDeviceResize,false);
 	/*var $=function(selector){
@@ -83,7 +83,7 @@ Zepto(function($){
 	            alert('正在定位');
 	        }, 
 	        success: function (json) {  
-	            if(json.status==0){ 
+	            if(json.status === 0){ 
 	                $(".ycd-location-txt").html(json.result.formatted_address); 
 	            } 
 	        }, 
@@ -118,7 +118,7 @@ Zepto(function($){
            return {
            	x:w.pageXOffset,
            	y:w.pageYOffset
-           }
+           };
     	}
     }
     function onTopBgColorChange(event){
@@ -126,9 +126,9 @@ Zepto(function($){
            	  var _y = _page_offset.y;
            	  var _top_header_height = $('.ycd-header-search-box-top').height();
            	  if(_y > _top_header_height){
-                 $('.ycd-header-search-box-top').css({top:_y}).addClass('ycd-top-bg-animation')
+                 $('.ycd-header-search-box-top').css({top:_y}).addClass('ycd-top-bg-animation');
            	  }else if(_y < _top_header_height){
-                 $('.ycd-header-search-box-top').css({top:_y}).removeClass('ycd-top-bg-animation')
+                 $('.ycd-header-search-box-top').css({top:_y}).removeClass('ycd-top-bg-animation');
            	  }
     }
     window.addEventListener('scroll',onTopBgColorChange,false);

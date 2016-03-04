@@ -20,13 +20,13 @@
            if(_options.maxWidth) _self.css({maxWidth:_options.maxWidth});
            if(_options.minWidth) _self.css({minWidth:_options.minWidth});
            _title.tap(function(event){
-           	  if(event.target == this) return;
+           	  if(event.target === this) return;
            	  toTab($(event.target).index());
            });
            //绑定touchstart touchmove touchend
            _self.on('touchstart',function(event){
              var et = event.touches[0];
-             if($(et.target).closest('.ycd-slider-box').length !=0){
+             if($(et.target).closest('.ycd-slider-box').length !== 0){
                m.canmove = true;
                m.initX = m.startX = et.pageX;
                m.initY = et.pageY;
@@ -77,31 +77,31 @@
               },_options.tick);
            }
             var toTitle = function (i) {
-                if (_title.length == 0) return;
+                if (_title.length === 0) return;
                 _title.children().toggleClass("ycd-ks-t2", false).eq(i).toggleClass("ycd-ks-t2", true);
-            }
+            };
            //清除时间计数器
            var clearTimer=function (){
            	  clearInterval(_timer);
            	  _timer = null;
-           }
+           };
            var move = function (i) {
                 _target.css("transform", "translate3d(" + (m.endX = i) + "px,0,0)");
-            }
+            };
 
             var setIndex = function (i) {
                 return i < 0 ? 0 : i >= _target.children().length ? _target.children().length - 1 : i;
-            }
+            };
 
            //切换图片效果函数
            var toTab = function (i){
                 i = setIndex(i), tw = _target.width();
                 move(-tw * i), toTitle(i);
-                if (currentTab != i && _options.change) {
+                if (currentTab !== i && _options.change) {
                     _options.change(i);
                 }
-                currentTab = i
-           }
+                currentTab = i;
+           };
            setTimer();
 	  }
 	  $.fn.slider.defaultOpt={
