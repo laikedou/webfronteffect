@@ -1,0 +1,3 @@
+SET RUBY_HOME=C:/Ruby22-x64  
+SET PATH=%PATH%;%RUBY_HOME%/bin  
+SET RUBYOPT=rubygems
