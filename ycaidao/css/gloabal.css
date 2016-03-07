@@ -80,4 +80,7 @@ input, option, select {
 .r {
   float: right; }
 
+.hidden {
+  display: none; }
+
 /*# sourceMappingURL=gloabal.css.map */

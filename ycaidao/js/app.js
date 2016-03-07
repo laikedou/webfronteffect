@@ -24,9 +24,12 @@
 		return document.querySelectorAll(selector);
  	};*/
 })(window,document,Zepto);
+//数据结构列表
 
 //网站公共js部分
 Zepto(function($){
+       //是否开启调试模式
+       var _debug_mode  = true;
 	//百度ip定位地址api ak秘钥
 	var baidu_iplocation_ak = 'AEyizCWyHqsgvGbdBp6wShtF';
 	//移动端底部状态切换
@@ -131,9 +134,46 @@ Zepto(function($){
                  $('.ycd-header-search-box-top').css({top:_y}).removeClass('ycd-top-bg-animation');
            	  }
     }
+
     window.addEventListener('scroll',onTopBgColorChange,false);
 
     //后续函数会新增聚焦到搜索框隐藏顶部搜索栏位 显示搜索页面的效果
-    
+
+   function debugMode(){
+      $('.ycd-header-search-box-top').hide();
+   }
+   if(_debug_mode){
+       //debugMode();
+   }
+
+   //头部搜索栏位当聚焦是显示搜索栏位
+   function initTopSearch(){
+
+      if(_curpage === 'index'){
+                    $('.ycd-header-search-box').hide();
+                   $('.ycd-header-search-container').hide();
+      }else if(_curpage === 'search'){
+                   $('.ycd-header-search-box').show();
+                   $('.ycd-header-search-container').show();
+      }
+      $('.ycd-js-search-input').on('focus',function(event){
+          $('.ycd-header-search-box-top').hide();
+          $('.ycd-js-container').hide();
+          $('.ycd-header-search-box').show();
+          $('.ycd-header-search-container').show();
+      });
+      $('.ycd-index-return').tap(function(){
+         $('.ycd-header-search-box').hide();
+          $('.ycd-header-search-container').hide();
+          $('.ycd-js-container').show();
+          $('.ycd-header-search-box-top').show();
+          onTopBgColorChange();//自动调整头部搜索栏位置
+      })
+      $('.ycd-other-return').on('tap',function(){
+         window.history.back(-1);
+      });
+   }
+  initTopSearch();
+
     
 });

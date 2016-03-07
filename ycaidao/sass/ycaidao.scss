@@ -309,4 +309,105 @@ body{
   }
 }
 //头部顶部固定导航效果
+.ycd-btn{
+    display: inline-block;
+    border-radius: pxTorem(5px);
+    border:1px solid #fff;
+    padding:pxTorem(5px);
+    color:#fff;
+    height:pxTorem(20px);
+    line-height: pxTorem(20px);
+    transition:background .2s linear;
+    min-width: pxTorem(40px);
+    font-size:pxTorem(12px);
+    &:hover{
+      background: rgba(255,255,255,0.3);
+    }
+}
+.ycd-btn-search-btn{
+    padding:pxTorem(5px) pxTorem(36px);
+    margin-left:pxTorem(5px);
+}
+.ycd-btn-clear-history{
+    background: #e4e4e4;
+    padding:pxTorem(5px)  pxTorem(10px);
+    color:#8a8a8a;
+    border:none;
+}
+.ycd-header-search-box{
+  height:pxTorem(35px);
+  padding:pxTorem(6px) pxTorem(8px);
+  width:calc(100% - 0.8rem);
+  background: #21b387;
+  display: flex;
+  top:0;
+  input[type=text].ycd-header-search-box-input{
+    border-radius: pxTorem(5px);
+    width:pxTorem(299px);
+    height:pxTorem(16px);
+    line-height:pxTorem(16px);
+    padding:pxTorem(7px) pxTorem(7px);
+    font-size:pxTorem(12px);
+    position: relative;
+    background: #fff;
+    color:#c4c4c4;
+    border:1px solid #90d9c3;
+    display:inline-block;
+    box-sizing:content-box;
 
+ }
+  .ycd-header-search-return{
+    display:inline-block;
+    width:pxTorem(85px);
+    height:pxTorem(35px);
+    line-height: pxTorem(35px);
+    color:#fff;
+    font-size:pxTorem(12px);
+  }
+}
+  .ycd-header-search-container{
+    width:calc(100% - 2.1rem);
+    padding:0 pxTorem(21px);
+    min-height: pxTorem(35px);
+    position: absolute;
+    top:pxTorem(47px);
+    background: #fff;
+    height:100%;
+    h2{
+      width:100%;
+      height:pxTorem(22px);
+      line-height: pxTorem(22px);
+      margin-top:pxTorem(10px);
+      border-bottom:2px solid #efefef;
+      padding-bottom:pxTorem(5px);
+      font-size: pxTorem(14px);
+    }
+    .ycd-header-search-tags{
+       padding:pxTorem(5px) 0;
+    }
+    .ycd-header-search-tags a{
+        display: inline-block;
+        border-radius: pxTorem(5px);
+        border:1px solid #b6b6b6;
+        padding:pxTorem(5px) pxTorem(15px);
+        color:#b6b6b6;
+        height:pxTorem(20px);
+        line-height: pxTorem(20px);
+        font-size:pxTorem(12px);
+        transition:background .2s linear;
+        margin-left:pxTorem(5px);
+        &:hover{
+          background: rgba(0,0,0,0.3);
+          color:#fff;
+        }
+    }
+   .ycd-header-search-content{
+        width:100%;
+        text-align: center;
+    }
+
+  }
+.ycd-header-search-result{
+  width:100%;
+  height:auto;
+}

@@ -67,6 +67,7 @@ module.exports = function(grunt) {
     }
 
   });
+
   // 从node_modules目录加载模块文件
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');

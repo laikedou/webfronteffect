@@ -138,6 +138,8 @@
 
 //网站公共js部分
 Zepto(function($){
+       //是否开启调试模式
+       var _debug_mode  = true;
 	//百度ip定位地址api ak秘钥
 	var baidu_iplocation_ak = 'AEyizCWyHqsgvGbdBp6wShtF';
 	//移动端底部状态切换
@@ -242,9 +244,19 @@ Zepto(function($){
                  $('.ycd-header-search-box-top').css({top:_y}).removeClass('ycd-top-bg-animation');
            	  }
     }
+    
     window.addEventListener('scroll',onTopBgColorChange,false);
 
     //后续函数会新增聚焦到搜索框隐藏顶部搜索栏位 显示搜索页面的效果
+
+   function debugMode(){
+      alert('');
+      $('.ycd-header-search-box-top').hide();
+   }
+   if(_debug_mode){
+       debugMode();
+   }
     
+
     
 });
