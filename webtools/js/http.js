@@ -120,6 +120,50 @@ window.onload = function (){
 
    */
    //console.log(getTextNotAsyn('http://localhost:808/ycaidao/index.html')); 
-   console.log(JSON);
+  
 }
-
+//使用POST方法发送multipart/form-data请求主题
+function postFormData(url,data,callback){
+  if(typeof FormData === 'undefined') throw new Error('FormData is not implemented!');
+  var request = new XMLHttpRequest();
+  request.open('POST',url);
+  request.onreadystatechange = function(){
+     if(request.readyState === 4 && callback){
+           return callback(request);
+     }
+  }
+  var formdata = new FormData();
+  for(name in formdata){
+    if(!formdata.hasOwnProperty(name)) continue;
+    if(typeof formdata[name] ==='function') continue;
+    formdata.append(name,formdata[name]);
+  }
+  //在mutipart请求主体中发送名/值对 每队都是请求的一部分 注意当传入FormData 对象时 send()会自动设置Content-Type
+  request.send(formdata);
+}
+//HTTP的进度事件
+function checkBrowserIsSupportProgressEvent(){
+  if('onprogress' in (new XMLHttpRequest())){
+    alert('支持http进度事件！');
+  }else{
+    alert('对不起您的浏览器不支持http进度事件！请更换谷歌或者火狐浏览器！');
+  }
+}
+whenReady(function(){
+  var elts = document.getElementsByTagName('input');
+  for (var i = 0; i < elts.length; i++) {
+    var input=elts[i];
+    if(input.type !=='file') continue;
+    var url = input.getAttribute('data-uploadTo');
+    if(!url) continue;
+    input.addEventListener('change', function(){
+      var file = this.files[0];
+      if(!file) return;
+      var xhr = new  XMLHttpRequest();
+      xhr.open('POST',url);
+      xhr.send(file);
+    },false);
+  }
+  //postFormData('http://www.baidu.com');
+  checkBrowserIsSupportProgressEvent();//检测当前浏览器对http progress事件的支持情况！
+});
