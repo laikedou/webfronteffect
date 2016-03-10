@@ -145,11 +145,7 @@ Zepto(function($){
        //debugMode();
    }
 
-   //初始化swiper
-   var indexCategrySwiper = new Swiper ('.swiper-container', {
-    direction: 'horizontal',
-    loop: true
-  })        
+  
 
     
 });

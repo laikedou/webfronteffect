@@ -86,4 +86,7 @@ input, option, select {
 .tc {
   text-align: center; }
 
+.inline-block {
+  display: inline-block; }
+
 /*# sourceMappingURL=gloabal.css.map */
