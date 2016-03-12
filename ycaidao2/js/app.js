@@ -145,7 +145,4 @@ Zepto(function($){
        //debugMode();
    }
 
-  
-
-    
 });
