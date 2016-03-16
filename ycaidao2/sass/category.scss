@@ -146,11 +146,13 @@ $calc-width:'-webkit-calc(100% - 1rem)';
               	color:#fff;
               }
             }
-            span.amount{
+            input.amount{
               font-size:pxTorem(20px);
               color:#55a533;
               line-height: pxTorem(40px);
               padding:0 pxTorem(12px);
+              text-align: center;
+              border:none;
             }
            
     	}
@@ -160,3 +162,35 @@ $calc-width:'-webkit-calc(100% - 1rem)';
 #swiper-container3 .swiper-slide{
 	display:flex;
 }
+
+.ycd-bottom-cart-info{
+  display:flex;
+  position: fixed;
+  bottom:pxTorem(110px);
+  left:0;
+  width:100%;
+  height:pxTorem(90px);
+  line-height: pxTorem(90px);
+  color:#eb2d29;
+  font-size:pxTorem(24px);
+  z-index: 99;
+  background: #fff;
+  border-top:1px solid #dedede;
+  .cart-info-total{
+    flex:1;
+    height:100%;
+    text-indent:pxTorem(24px);
+    & a{
+      color:#eb2d29;
+      display:inline-block;
+    }
+  }
+  .cart-info-checkout{
+     width:pxTorem(160px);
+     height:pxTorem(90px);
+     background: #eb2d29;
+     color:#fff;
+     text-align: center;
+  }
+}
+
