@@ -235,6 +235,86 @@ whenReady(function(){
 
 
   }
-
+   
+   //获取远程数据 
+   getScriptByCors();
 
 });
+
+
+//终止请求和超时
+function timeedGetText(url,timeout,callback){
+      var xhr = new XMLHttpRequest();
+      var timedout = false;
+      var timer = setTimeout(function(){
+               timedout = true;
+               xhr.abort();
+      },timeout);
+      xhr.onreadystatechange = function(){
+         if(xhr.readyState !=4){ return;}
+         if(timedout){ return;}
+         clearTimeout(timer);
+         if(xhr.status === 200){
+           callback(xhr.responseText);
+         }
+      };
+}
+
+//跨域HTTP请求
+function getScriptByCors(){
+   var supportsCORS = (new XMLHttpRequest()).withCredentials !== undefined;
+   //遍历页面上的所有连接
+   var links = document.getElementsByTagName('a');
+   for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      if(!link.href) continue;//跳过没有超级链接的描点
+      if(link.title) continue;//跳过已经有了工具提示的链接
+      //如果这是一个跨域的链接
+      if(link.host !== location.host || link.protocol !== location.protocol){
+             link.title = '站外链接';
+             if(!supportsCORS){
+               continue; //如果不支持cors 那么就直接退出
+             }
+      }
+      if(link.addEventListener){
+        //注册监听事件
+        link.addEventListener('mouseover',moseMoveHandler,false);//不需要进行捕捉事件
+      }else{
+        //IE 事件模型
+        link.attachEvent('onmouseover',moseMoveHandler);
+      }
+
+     
+   }
+   function moseMoveHandler(event){
+    event = event || window.event;
+    var target = event.target || event.srcElement;
+    var url = target.href;
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD',url);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState !== 4) return;
+        if(xhr.status === 200){
+            var type = xhr.getResponseHeader('Content-Type');
+            var size = xhr.getResponseHeader('Content-Length');
+            var date = xhr.getResponseHeader('Last-Modified');
+            alert(type);
+            //在工具提示中显示详细信息
+            link.title = '类型:'+type+'\n'+'大小:'+size+'\n'+'时间:'+date+'\n';
+        }else{
+          //请求失败
+          if(!link.title){
+             link.title = 'can not fetch details :\n'+xhr.status+" "+xhr.statusText;
+          }
+        }
+    };
+    xhr.send(null);
+    //移除处理程序
+    if(link.removeEventListener){
+       link.removeEventListener('mouseover',moseMoveHandler,false);
+    }else{
+      //IE事件模型
+      link.detachEvent('onmouseover',moseMoveHandler);
+    }
+   }
+}
