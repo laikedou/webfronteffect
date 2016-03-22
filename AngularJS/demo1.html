@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>angularjs简单入门教程</title>
+	<link rel="stylesheet" href="css/demo1.css">
+	<script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+	<script>
+		$scope.hello = "Hello, World!"
+	</script>
+</head>
+<body>
+	Hello {{'World'}}!
+	<hr>
+	Your name: <input type="text" ng-model="yourname" placeholder="World">
+        <hr>
+        Hello {{yourname || 'World'}}!
+        <hr>
+        <input type="text" ng-model="phones" placeholder="18181940764" />
+        <p>Total number of phones: {{phones.length||0}}</p>
+
+        <table>
+    <tr><th>row number</th></tr>
+    <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i}}</td></tr>
+</table>
+</body>
+</html>
