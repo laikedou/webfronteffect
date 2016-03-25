@@ -534,6 +534,8 @@ body {
         color: #000017;
         font-size: 1.6rem;
         margin-left: 1.2rem; }
+      .ycd-my-user-op-list dl a dt.ycd-light-green {
+        color: #55a533; }
       .ycd-my-user-op-list dl a dd {
         -webkit-box-flex: 1;
         -webkit-flex: 1;
@@ -547,6 +549,8 @@ body {
         display: inline-block;
         font-size: 1.5rem;
         line-height: 4.3rem; }
+    .ycd-my-user-op-list dl a.ycd-light-green {
+      color: #55a533; }
   .ycd-my-user-op-list dl:last-child {
     border: none; }
 

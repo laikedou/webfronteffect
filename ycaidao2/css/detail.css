@@ -1,0 +1,133 @@
+.ycd-ot-header-top {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "Microsoft YaHei","Arial";
+  background: #55a533; }
+  .ycd-ot-header-top h2.title {
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -50%;
+    text-align: center;
+    font-size: 1.6rem; }
+  .ycd-ot-header-top a.ycd-ot-return {
+    display: inline-block;
+    margin-left: 1.25rem;
+    color: #fff;
+    padding-right: 1.25rem; }
+
+.mrl-25 {
+  margin-left: 1.25rem; }
+
+.mrt-20 {
+  margin-top: 1rem; }
+
+.flex-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.ycd-detail-page-container {
+  font-family: "Microsoft YaHei","Arial";
+  width: 100%;
+  padding-top: 1.15rem; }
+  .ycd-detail-page-container .ycd-detail-item {
+    width: 100%;
+    min-height: 1.5rem;
+    border-bottom: 1px solid #d6d7dc;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .ycd-detail-page-container .ycd-detail-item dt.ycd-detail-item-img-ct {
+      position: relative; }
+      .ycd-detail-page-container .ycd-detail-item dt.ycd-detail-item-img-ct h2.name {
+        font-size: 1.2rem;
+        color: #2b2b2b;
+        position: absolute;
+        left: 8.2rem;
+        top: 3rem;
+        width: 18.5rem; }
+    .ycd-detail-page-container .ycd-detail-item dt.ycd-detail-item-img-ct img {
+      width: 7.1rem;
+      height: 7.1rem; }
+    .ycd-detail-page-container .ycd-detail-item .ycd-detail-item-collect {
+      display: inline-block;
+      margin-left: 19.65rem;
+      margin-top: 1.35rem;
+      height: 4.4rem;
+      border-left: 1px solid #d6d7dc;
+      width: 9.5rem;
+      text-align: center;
+      line-height: 4.4rem;
+      color: #adadad; }
+      .ycd-detail-page-container .ycd-detail-item .ycd-detail-item-collect span {
+        display: block; }
+      .ycd-detail-page-container .ycd-detail-item .ycd-detail-item-collect span.ycd-detail-item-collect-icon {
+        font-size: 1.6rem; }
+      .ycd-detail-page-container .ycd-detail-item .ycd-detail-item-collect span.op {
+        font-size: 1.2rem; }
+    .ycd-detail-page-container .ycd-detail-item .ycd-detail-add-to-cart {
+      display: inline-block;
+      height: 7.55rem;
+      width: 9.5rem;
+      text-align: center;
+      line-height: 7.55rem;
+      color: #adadad;
+      font-size: 1.6rem; }
+      .ycd-detail-page-container .ycd-detail-item .ycd-detail-add-to-cart a {
+        color: #adadad; }
+        .ycd-detail-page-container .ycd-detail-item .ycd-detail-add-to-cart a span.ycd-detail-item-add {
+          display: inline-block;
+          border-radius: 50%;
+          padding: 0.25rem;
+          border: 0.05rem solid #adadad; }
+    .ycd-detail-page-container .ycd-detail-item dt.title {
+      width: 26.75rem;
+      height: 1.75rem;
+      color: #2b2b2b;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem; }
+      .ycd-detail-page-container .ycd-detail-item dt.title span.price {
+        color: #f34946;
+        font-size: 1.9rem; }
+    .ycd-detail-page-container .ycd-detail-item dd.description {
+      color: #6d6d6d;
+      font-size: 1.1rem; }
+    .ycd-detail-page-container .ycd-detail-item span.ycd-icon-promotion {
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      background: #f34946;
+      font-weight: bold;
+      margin-right: 0.75rem; }
+  .ycd-detail-page-container .ycd-detail-item-promotion-info {
+    color: #2b2b2b;
+    font-size: 1.2rem;
+    padding: 1.25rem 0; }
+
+.ycd-detail-info {
+  width: 100%;
+  padding-top: 1.25rem; }
+  .ycd-detail-info .detail-title {
+    font-size: 1.4rem;
+    color: #2b2b2b; }
+  .ycd-detail-info p {
+    margin-top: 0.75rem;
+    color: #6d6d6d;
+    font-size: 1.2rem;
+    line-height: 1.5rem; }
+
+/*# sourceMappingURL=detail.css.map */
