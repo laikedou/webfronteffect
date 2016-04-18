@@ -1,0 +1,42 @@
+.ycd-address-op-list dl {
+  background: #fff; }
+  .ycd-address-op-list dl a span.ycd-address-op-icon {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 4.3rem;
+    color: #55a533; }
+  .ycd-address-op-list dl a dt {
+    color: #55a533; }
+
+.ycd-address-list {
+  width: 100%;
+  margin-bottom: 0.75rem; }
+  .ycd-address-list li {
+    height: 4.35rem;
+    padding: 1.2rem;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #2b2b2b; }
+    .ycd-address-list li .content {
+      line-height: 1.25rem;
+      font-size: 1.2rem;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .ycd-address-list li .content p {
+        padding: 0.25rem; }
+    .ycd-address-list li .ops {
+      width: 1.5rem;
+      height: 100%;
+      padding-right: 1.25rem; }
+      .ycd-address-list li .ops span {
+        display: inline-block;
+        font-size: 1.6rem; }
+      .ycd-address-list li .ops .ycd-address-edit-icon {
+        margin-top: 1.25rem; }
+
+/*# sourceMappingURL=address.css.map */

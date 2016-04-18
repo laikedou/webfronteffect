@@ -1,0 +1,65 @@
+$browser-default-font-size:20px !default;
+$default-font-color:#999;
+$header-top-offset:pxTorem(20px);
+$calc-width:'-webkit-calc(100% - 1rem)';
+@function pxTorem($px) {
+    @return $px / $browser-default-font-size *1rem;
+}
+
+#profile_form,#product_form{
+    width:100%;
+    background: #fff;
+     dl{
+         width:100%;
+         height:pxTorem(70px);
+         line-height: pxTorem(70px);
+         color:#2b2b2b;
+         font-size:pxTorem(24px);
+         display: flex;
+         border-bottom:1px solid #d6d7dc;
+         dt{
+             width:pxTorem(128px);
+             text-indent:pxTorem(24px);
+             margin-right:pxTorem(17px);
+         }
+         dd{
+             flex:1;
+             padding-right:pxTorem(5px);
+             input{
+                 width:100%;
+                 border:none;
+                 background: none;
+                 color:#787878;
+                 font-size:pxTorem(24px);
+                 display: inline-block;
+                 
+                 text-indent: pxTorem(10px);
+                 transition:all linear .3s;
+                 padding:pxTorem(5px) 0 pxTorem(1px) 0 ;
+                 &:focus{
+                     border:1px solid #F25C59;
+                     background: rgba(0,0,0,0.1);
+                 }
+             }
+             
+         }
+     }
+     button.submit{
+         display:inline-block;
+         width:pxTorem(600px);
+         height:pxTorem(60px);
+         line-height: pxTorem(60px);
+         background: #55a533;
+         border-radius:pxTorem(5px);
+         margin:pxTorem(24px) 0;
+         color:#fff;
+         font-size:pxTorem(32px);
+         transition:all linear .3s;
+         border:none;
+         &:hover{
+             background: #5CB85C;
+         }
+         
+         
+     }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACF,UAAU,EAAC,IAAI",
+"sources": ["../sass/collect.scss"],
+"names": [],
+"file": "collect.css"
+}

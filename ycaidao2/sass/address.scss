@@ -1,0 +1,62 @@
+$browser-default-font-size:20px !default;
+$default-font-color:#999;
+$header-top-offset:pxTorem(20px);
+$calc-width:'-webkit-calc(100% - 1rem)';
+@function pxTorem($px) {
+    @return $px / $browser-default-font-size *1rem;
+}
+.ycd-address-op-list  dl{
+    background: #fff;
+    a{
+        
+        span.ycd-address-op-icon{
+            display: inline-block;
+            font-size:pxTorem(40px);
+            line-height: pxTorem(86px);
+            color:#55a533;
+            
+        }
+        dt{
+            color:#55a533;
+        }
+    }
+    
+}
+.ycd-address-list{
+    width:100%;
+    margin-bottom:pxTorem(15px);
+    li{
+        
+        height:pxTorem(87px);
+        padding:pxTorem(24px);
+        background: #fff;
+        display:flex;
+        color:#2b2b2b;
+        .content{
+            line-height: pxTorem(25px);
+            font-size:pxTorem(24px);
+            flex:1;
+            p{
+                padding:pxTorem(5px);
+            }
+            
+        }
+        .ops{
+            width:pxTorem(30px);
+            height:100%;
+            padding-right:pxTorem(25px);
+            span{
+                display:inline-block;
+                font-size:pxTorem(32px);
+            }
+            .ycd-address-delete-icon{
+                
+            }
+            .ycd-address-edit-icon{
+                margin-top:pxTorem(25px);
+            }
+        }
+    }
+    
+    
+}

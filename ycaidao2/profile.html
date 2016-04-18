@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+    <!--考虑到iPhone ipad 使用的retina 屏幕 dpr=2 所以 1/2=0.5 进行适配对页面进行缩放 可能导致字体变化但是使用rem 暂时不存在此问题-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/gloabal.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/ycaidao.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+    <title>有菜到手机客户端</title>
+    <script type="text/javascript">
+          var _curpage = 'index';
+    </script>
+</head>
+<body>
+<!--头部搜索-->
+<div class="ycd-header-search-box-top">
+	<div class="ycd-js-search-input-box">
+	    <i class="ycd-font-icon ycd-js-back-icon inline-block">&#xe633;</i>
+	    <h2>个人资料</h2>
+	</div>
+</div>
+<div class="ycd-js-container ycd-profile-list">
+       <div class="top-lines" style="background:none;"></div>
+       <form id="profile_form" action="_self" method="post">
+       	   <input type="hidden"  name="hidename1"/>
+       	   <input type="hidden"  name="hidename2"/>
+	       <dl>
+	       	<dt>店铺名称:</dt>
+	       	<dd><input type="text" placeholder="请输入名称" name="store_name" value="" /></dd>
+	       </dl>
+	       <dl>
+	       	<dt>真实姓名:</dt>
+	       	<dd><input type="text" placeholder="请输入姓名" name="real_name" value="" /></dd>
+	       </dl>
+	       <dl>
+	       	<dt>手机号码:</dt>
+	       	<dd><input type="text" placeholder="请输入手机号" name="mobile" value="" /></dd>
+	       </dl>
+	       <dl>
+	       	<dt>电子邮箱:</dt>
+	       	<dd><input type="text" placeholder="请输入邮箱" name="email" value="" /></dd>
+	       </dl>
+	       <dl>
+	       	<dt>客户经理:</dt>
+	       	<dd><input type="text" placeholder="请输入客户经理" name="manager" value="" /></dd>
+	       </dl>
+	       <p class="tc">
+	       	<button class="submit">提交</button>
+	       </p>
+	       
+       </form>
+
+</div>
+
+<script src="js/zepto.js"></script>
+<script src="js/zepto.slider.js"></script>
+<script src="js/swiper3.1.zepto.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+</script>
+</body>
+</html>

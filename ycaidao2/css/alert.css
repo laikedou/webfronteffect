@@ -17,11 +17,8 @@ body {
   width: 25rem;
   padding: 0;
   opacity: 1;
-  -webkit-transform: scale(1) translate(-50%, -50%);
-      -ms-transform: scale(1) translate(-50%, -50%);
-          transform: scale(1) translate(-50%, -50%);
-  -webkit-transition: all 0.20s  ease-in-out;
-          transition: all 0.20s  ease-in-out;
+  transform: scale(1) translate(-50%, -50%);
+  transition: all 0.20s  ease-in-out;
   position: absolute;
   z-index: 1000000;
   top: 50%;
@@ -47,9 +44,7 @@ body {
 
 .car-popup.hidden {
   opacity: 0;
-  -webkit-transform: scale(0) translate(-50%, -50%);
-      -ms-transform: scale(0) translate(-50%, -50%);
-          transform: scale(0) translate(-50%, -50%);
+  transform: scale(0) translate(-50%, -50%);
   top: 50%;
   left: 50%;
   margin: 0 auto; }

@@ -7,8 +7,7 @@
   width: 100%; }
 
 .ycd-slider .ycd-slider-ks-ts {
-  -webkit-transition: 500ms;
-          transition: 500ms; }
+  transition: 500ms; }
 
 .ycd-slider .ycd-slider-box {
   width: 100%;
@@ -29,7 +28,6 @@
 .ycd-slider .ycd-ks-wt li {
   text-align: center;
   list-style: none;
-  background: -webkit-linear-gradient(top, #AAAAAA 0%, #979797 100%);
   background: linear-gradient(top, #AAAAAA 0%, #979797 100%);
   color: #fff; }
 
@@ -40,7 +38,6 @@
   border-right: solid 1px #BBB; }
 
 .yc-slider-wt2 .ycd-ks-wt li {
-  background: -webkit-linear-gradient(top, #e7e7e7 0%, #dfdfdf 100%);
   background: linear-gradient(top, #e7e7e7 0%, #dfdfdf 100%);
   width: 0.6rem;
   height: 0.6rem;
@@ -51,21 +48,12 @@
   margin-left: 0.6rem; }
 
 .yc-slider-wt1 .ycd-ks-wt .ycd-ks-t2 {
-  background: -webkit-linear-gradient(top, #e7e7e7 0%, #dfdfdf 100%);
   background: linear-gradient(top, #e7e7e7 0%, #dfdfdf 100%);
   color: #000; }
 
 .yc-slider-wt2 .ycd-ks-wt .ycd-ks-t2 {
-  background: -webkit-linear-gradient(top, #AAAAAA 0%, #979797 100%);
   background: linear-gradient(top, #AAAAAA 0%, #979797 100%);
-  -webkit-animation: kt2 500ms linear;
-          animation: kt2 500ms linear; }
-
-@-webkit-keyframes kt2 {
-  0% {
-    -webkit-transform: scale(1); }
-  100% {
-    -webkit-transform: scale(1.5); } }
+  animation: kt2 500ms linear; }
 
 @keyframes kt2 {
   0% {

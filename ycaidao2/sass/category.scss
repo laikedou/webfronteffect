@@ -59,6 +59,8 @@ $calc-width:'-webkit-calc(100% - 1rem)';
 }
 .yc-swiper-right-list-content{
     flex:1;
+    height:pxTorem(900px);
+    overflow-y: scroll;
     .yc-swiper-right-list-item{
     	width:100%;
     	height:pxTorem(195px);

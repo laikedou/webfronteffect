@@ -17,9 +17,9 @@ body {
 
 @font-face {
   font-family: 'iconfont';
-  src: url("http://at.alicdn.com/t/font_1458198316_830402.eot");
+  src: url("//at.alicdn.com/t/font_1460793370_1081738.eot");
   /* IE9*/
-  src: url("http://at.alicdn.com/t/font_1458198316_830402.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1458198316_830402.woff") format("woff"), url("http://at.alicdn.com/t/font_1458198316_830402.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1458198316_830402.svg#iconfont") format("svg")
+  src: url("//at.alicdn.com/t/font_1460793370_1081738.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1460793370_1081738.woff") format("woff"), url("//at.alicdn.com/t/font_1460793370_1081738.ttf") format("truetype"), url("//at.alicdn.com/t/font_1460793370_1081738.svg#iconfont") format("svg")
   /* iOS 4.1- */ }
 [class^=ycd-font-icon] {
   display: inline-block;
@@ -503,23 +503,23 @@ body {
     display: inline-block;
     padding-top: 0.6rem; }
 
-.ycd-my-user-op-list {
+.ycd-my-user-op-list, .ycd-address-op-list {
   width: 100%;
   margin-top: 0.6rem;
   background: #f5f5f5; }
-  .ycd-my-user-op-list dl {
+  .ycd-my-user-op-list dl, .ycd-address-op-list dl {
     padding-left: 1.25rem;
     border-bottom: 0.05rem solid #969696; }
-    .ycd-my-user-op-list dl:active {
+    .ycd-my-user-op-list dl:active, .ycd-address-op-list dl:active {
       background: #55a533;
       color: #fff; }
-      .ycd-my-user-op-list dl:active span.ycd-my-op-icon {
+      .ycd-my-user-op-list dl:active span.ycd-my-op-icon, .ycd-address-op-list dl:active span.ycd-my-op-icon {
         color: #fff; }
-      .ycd-my-user-op-list dl:active dt {
+      .ycd-my-user-op-list dl:active dt, .ycd-address-op-list dl:active dt {
         color: #fff; }
-      .ycd-my-user-op-list dl:active dd {
+      .ycd-my-user-op-list dl:active dd, .ycd-address-op-list dl:active dd {
         color: #fff; }
-    .ycd-my-user-op-list dl a {
+    .ycd-my-user-op-list dl a, .ycd-address-op-list dl a {
       width: 100%;
       display: inline-block;
       color: #98a5aa;
@@ -529,14 +529,14 @@ body {
       display: flex;
       height: 4.3rem;
       line-height: 4.3rem; }
-      .ycd-my-user-op-list dl a dt {
+      .ycd-my-user-op-list dl a dt, .ycd-address-op-list dl a dt {
         display: inline-block;
         color: #000017;
         font-size: 1.6rem;
         margin-left: 1.2rem; }
-      .ycd-my-user-op-list dl a dt.ycd-light-green {
+      .ycd-my-user-op-list dl a dt.ycd-light-green, .ycd-address-op-list dl a dt.ycd-light-green {
         color: #55a533; }
-      .ycd-my-user-op-list dl a dd {
+      .ycd-my-user-op-list dl a dd, .ycd-address-op-list dl a dd {
         -webkit-box-flex: 1;
         -webkit-flex: 1;
             -ms-flex: 1;
@@ -545,13 +545,13 @@ body {
         padding-right: 1.2rem;
         display: inline-block;
         font-size: 1.6rem; }
-      .ycd-my-user-op-list dl a span.ycd-my-op-icon {
+      .ycd-my-user-op-list dl a span.ycd-my-op-icon, .ycd-address-op-list dl a span.ycd-my-op-icon {
         display: inline-block;
         font-size: 1.5rem;
         line-height: 4.3rem; }
-    .ycd-my-user-op-list dl a.ycd-light-green {
+    .ycd-my-user-op-list dl a.ycd-light-green, .ycd-address-op-list dl a.ycd-light-green {
       color: #55a533; }
-  .ycd-my-user-op-list dl:last-child {
+  .ycd-my-user-op-list dl:last-child, .ycd-address-op-list dl:last-child {
     border: none; }
 
 /*# sourceMappingURL=ycaidao.css.map */

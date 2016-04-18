@@ -1,0 +1,31 @@
+$browser-default-font-size:20px !default;
+$default-font-color:#999;
+$header-top-offset:pxTorem(20px);
+$calc-width:'-webkit-calc(100% - 1rem)';
+@function pxTorem($px) {
+    @return $px / $browser-default-font-size *1rem;
+}
+body{
+    background:#fff ;
+}
+#product_form{
+    height:auto;
+    dl{
+        height:auto;
+        text-align: center;
+    }
+    textarea{
+        display:inline-block;
+        width:pxTorem(700px);
+        height:pxTorem(415px);
+        font-size: pxTorem(22px);
+        color:#787878;
+        border:none;
+        transition:all linear .3s;
+        padding:pxTorem(10px);
+         &:focus{
+                     
+                     background: rgba(0,0,0,0.1);
+        }
+    }
+}
