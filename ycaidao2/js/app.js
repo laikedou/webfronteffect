@@ -145,4 +145,9 @@ Zepto(function($){
        //debugMode();
    }
 
+   //各个页面返回
+   $('.ycd-js-back-icon,.ycd-ot-return').tap(function(){
+        history.back();
+   });
+
 });

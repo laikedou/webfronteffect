@@ -30,16 +30,22 @@
   margin-top: 1rem; }
 
 .flex-1 {
-  flex: 1; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .ycd-detail-page-container {
   font-family: "Microsoft YaHei","Arial";
   width: 100%;
-  padding-top: 1.15rem; }
+  padding-top: 4.5rem; }
   .ycd-detail-page-container .ycd-detail-item {
     width: 100%;
     min-height: 1.5rem;
     border-bottom: 1px solid #d6d7dc;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
     .ycd-detail-page-container .ycd-detail-item dt.ycd-detail-item-img-ct {
       position: relative; }
