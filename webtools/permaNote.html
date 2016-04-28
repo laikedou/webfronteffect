@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html manifest="permanote.appcache">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>permaNote 记事本</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<style type="text/css" media="screen">
+		 body{
+		 	margin:0 ;
+		 	padding:0;
+		 }
+		 #editor{
+            width:100%;
+            height:250px;
+		 } 
+		 #statusline{
+		 	width:100%;
+		 }
+	</style>
+	<div id="toolbar">
+		<button id="savebutton">Save</button>
+		<button onclick="sync()">sync Note</button>
+		<button onclick="applicationCache.update()">update application</button>
+	</div>
+	<textarea name="" id="editor"></textarea>
+	<div id="statusline">
+		
+	</div>
+	<script>
+	    var editor,statusline,savebutton,idletimer;
+		window.onload=function(){
+			
+			editor = document.getElementById('editor');
+			statusline = document.getElementById('statusline');
+			savebutton = document.getElementById('savebutton');
+			editor.value = localStorage.note;
+			editor.disabled = true;
+			editor.addEventListener('input',function(event){
+                   localStorage.note = editor.value;
+                   localStorage.lastModified = Date.now();
+                   if(idletimer){
+                   	  clearTimeout(idletimer);
+                   }
+                   idletimer = setTimeout(save,5000);
+
+			},false);
+			sync();
+		};
+		window.onbeforeunload=function(){
+			 if(localStorage.lastModified > localStorage.lastSaved){
+                save();
+			 }
+		};
+		//离线时
+		window.onoffline = function(){
+			status('offline');
+		};
+		window.ononline =function(){
+			sync();
+		};
+		window.applicationCache.onupdateready=function(){
+			status('a new version of this application is available ,reload to run it!');
+		};
+		window.applicationCache.onnoupdate=function(){
+			status('you are running the latest version of the application');
+		};
+		function status(msg){
+			  statusline.innerHTML += msg+'\n';
+		}
+		function save(){
+			if (idletimer) {
+				clearTimeout(idletimer);
+			}
+			idletimer = null;
+			if(navigator.online){
+                var xhr = new XMLHttpRequest();
+                xhr.open('put','/note');
+                xhr.send(editor.value);
+                xhr.onload = function(){
+                	localStorage.lastSaved = Date.now();
+                	savebutton.disabled =true;
+                };
+
+			}
+
+		}
+		function sync(){
+			if(navigator.online){
+                  var xhr = new XMLHttpRequest();
+                  xhr.open('GET','/note');
+                  xhr.send();
+                  xhr.onload = function(){
+                         var remoteModTime = 0;
+                         if(xhr.status ===200){
+                                 var remoteModTime = xhr.getResponseHeader('Last-Modified');
+                                 remoteModTime = new Date(remoteModTime).getTime();
+                         }
+                         if(remoteModTime > localStorage.lastModified){
+                                 status('newer note found on server ');
+                                 var useit = confirm("click ok to use that version");
+                                 var now = Date.now();
+                                 if(useid){
+                                   editor.value = localStorage.note = xhr.responseText;
+                                   localStorage.lastSaved = now;
+                                   status('newest version downloaded');
+                                 }else{
+                                   status('ignoring newer version of note');
+                                 }
+                                 localStorage.lastModified = now;
+                         }else{
+                         	status('your are editing the current version of the note!');
+                         }
+                         if(localStorage.lastModified > localStorage.lastSaved){
+                         	save();
+                         }
+                         editor.disabled = false;
+                         editor.focus();
+                  };
+			}else{
+				status('can not sync while offline');
+				editor.disabled = false;
+				editor.focus();
+			}
+		}
+	</script>
+</body>
+</html>
