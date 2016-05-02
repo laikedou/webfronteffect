@@ -1,6 +1,6 @@
 
 #ljdy-banner1{
-    height:895px;
+    height:auto;
 }
 .swiper-slide article{
     position: absolute;
@@ -353,4 +353,134 @@ a.bgm-btn{
      font-size:16px;
      text-align: center;
    }
+}
+.row2{
+    color:#fff;
+    a{
+        color:#fff;
+    }
+    background: rgba(0,0,0,0.8);
+}
+#breadcrumb li a::after, .sidebar nav a::after{
+    position:absolute; 
+    font-family:"FontAwesome"; 
+    font-size:10px; 
+    line-height:10px;
+}
+#breadcrumb {
+    padding:50px 0 20px;
+    ul{
+        margin:0;
+        padding:0;
+        list-style: none;
+        li{
+            display:inline-block;
+            padding:0 6px 0 0;
+            a{
+                color: inherit;
+                background: inherit;
+                display:inline-block;
+                position: relative;
+                margin:0;
+                padding:0 12px 0 0;
+                font-size:12px;
+                &::after{
+                    top:5px;
+                    right:0;
+                    content: '\f101';
+                }
+            }
+            &:last-child a{
+                &::after{
+                    content: '';
+                }
+                color:#65beb8;
+            }
+        }
+    }
+}
+#gallery-container{
+    ul li{
+       margin-bottom: 30px; 
+       a{
+           display: inline-block;
+           width:250px;
+           height:167px;
+       }
+       .gallery-pic{
+           
+           background-repeat: no-repeat;
+           background-size: 100% 100%;
+       }
+    }
+    figure{
+        figcaption{
+            word-break: break-all;
+            word-wrap: break-word;
+            line-height: 25px;
+        }
+         
+    }
+    
+    header{
+        
+    }
+}
+.ljdy-content-map{
+    width:100%;
+    min-height: 780px;
+    border:none;
+}
+
+/* Sidebar Navigation */
+.sidebar nav{display:block; width:100%;}
+.sidebar nav li{margin:0 0 3px 0; padding:0;list-style-type: none;}
+.sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:solid; border-width:0 0 1px 0;}
+.sidebar nav a::after{top:9px; left:5px; content:"\f101";}
+.sidebar nav ul ul a{padding-left:35px;}
+.sidebar nav ul ul a::after{left:25px;}
+.sidebar nav ul ul ul a{padding-left:55px;}
+.sidebar nav ul ul ul a::after{left:45px;}
+
+/* Content Area */
+.blocks .overlay:hover{color:#000000;}
+.blocks .overlay:hover::after{color:inherit; background-color:rgba(255,255,255,.75);}
+
+.elements article{box-shadow:0px 2px 5px rgba(0,0,0,.1);}
+.elements .txtwrap{border-color:#82A800;}
+
+
+/* Testimonials */
+#testimonials li div{color:#000000; background-color:rgba(255,255,255,.75);}
+#testimonials li div:hover{color:#FFFFFF; background-color:#82A800;}
+
+
+/* Navigation */
+#mainav{border-color:rgba(255,255,255,.2);}
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#82A800; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#82A800;}
+#mainav form select{color:#FFFFFF; background-color:#1F1F1F; border-color:#000000;}
+
+#breadcrumb a{color:inherit; background-color:inherit;}
+#breadcrumb li:last-child a{color:#82A800;}
+
+.container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar nav a:hover{color:#82A800;}
+
+.pagination a, .pagination strong{border-color:#D7D7D7;}
+.pagination .current *{color:#FFFFFF; background-color:#82A800;}
+
+#backtotop{color:#FFFFFF; background-color:#65beb8;}
+
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
+
+address a{
+    color:#65beb8;
 }
