@@ -1,0 +1,7 @@
+tada
+wobble
+bounceInLeft
+bounceInRight
+bounceIn
+bounceInDown
+fadeIn

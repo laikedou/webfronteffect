@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="css/spinkit.css"/>
+    <link rel="stylesheet" type="text/css" href="css/leaves.css"/>
+     <link rel="stylesheet" type="text/css" href="css/buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/520.css"/>
+    <title>520 情人节 为乖乖制作的HTML5专属页面</title>
+</head>
+<body>
+<!--音乐控制按钮-->
+<a href="javascript:void(0);" class="bgm-btn"></a>
+<div class="help dn">?</div> 
+<div class="ui dn">
+  <input class="ui-input" type="text">
+  <span class="ui-return">↵</span>
+</div>
+<div class="overlay dn">
+  <div class="tabs">
+    <div class="tabs-labels"><span class="tabs-label tabs-label--active">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+
+    <div class="tabs-panels">
+      <ul class="tabs-panel commands tabs-panel--active">
+        <li class="commands-item"><span class="commands-item-title">Text</span><span class="commands-item-info" data-demo="Hello :)">Type anything</span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item"><span class="commands-item-title">Countdown</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item"><span class="commands-item-title">Time</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item"><span class="commands-item-title">Rectangle</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item"><span class="commands-item-title">Circle</span><span class="commands-item-info" data-demo="#circle 25">#circle<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>
+
+        <li class="commands-item commands-item--gap"><span class="commands-item-title">Animate</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span></span><span class="commands-item-action">Demo</span></li>
+      </ul>
+
+      <div class="tabs-panel ui-details">
+        <div class="ui-details-content">
+          <h1>Shape Shifter</h1>
+          <p>
+            An experiment by <a href="http://www.kennethcachia.com/" target="_blank">Kenneth Cachia</a><a>.<br>
+            </a><a href="http://fortawesome.github.io/Font-Awesome/#icons-new" target="_blank">Font Awesome</a> is being used to render all #icons.
+          </p>
+
+          <br><p>Visit <a href="http://www.kennethcachia.com/shape-shifter/?a=#icon thumbs-up" target="_blank">Shape Shifter</a> to use icons.</p>
+        </div>
+      </div>
+
+      <div class="tabs-panel ui-share">
+        <div class="ui-share-content">
+          <h1>Sharing</h1>
+          <p>Simply add <em>?a=</em> to the current URL to share any static or animated text. Examples:</p>
+          <p>
+            <a href="http://www.kennethcachia.com/shape-shifter?a=Hello" target="_blank">www.kennethcachia.com/shape-shifter?a=Hello</a><br>
+            <a href="http://www.kennethcachia.com/shape-shifter?a=Hello|#countdown 3" target="_blank">www.kennethcachia.com/shape-shifter?a=Hello|#countdown 3</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+	作者：924462390@qq.com
+	时间：2016-05-07
+	描述：音乐播放器js dom
+-->
+<div class="grid-music-container f-usn" style="display:none;">
+    <div class="m-music-play-wrap">
+        <div class="u-cover"></div>
+        <div class="m-now-info">
+            <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+            <div class="m-now-controls">
+                <div class="u-control u-process">
+                    <span class="buffer-process"></span>
+                    <span class="current-process"></span>
+                </div>
+                <div class="u-control u-time">00:00/00:00</div>
+                <div class="u-control u-volume">
+                    <div class="volume-process" data-volume="0.50">
+                        <span class="volume-current"></span>
+                        <span class="volume-bar"></span>
+                        <span class="volume-event"></span>
+                    </div>
+                    <a class="volume-control"></a>
+                </div>
+            </div>
+            <div class="m-play-controls">
+                <a class="u-play-btn prev" title="上一曲"></a>
+                <a class="u-play-btn ctrl-play play" title="暂停"></a>
+                <a class="u-play-btn next" title="下一曲"></a>
+                <a class="u-play-btn mode mode-list current" title="列表循环"></a>
+                <a class="u-play-btn mode mode-random" title="随机播放"></a>
+                <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+            </div>
+        </div>
+    </div>
+    <div class="f-cb">&nbsp;</div>
+    <!--<div class="m-music-list-wrap"></div>
+    <div class="m-music-lyric-wrap">
+    	<div class="inner-bg"></div>
+        <div class="inner">
+            <ul class="js-music-lyric-content">
+                <li class="eof">暂无歌词...</li>
+            </ul>
+        </div>
+    </div>-->
+    <div class="music-container-blur-bg"></div>
+</div>
+
+<!--<div class="lk-container-canvas-bg-bg rel zIndex1">
+	
+</div>-->
+<div class="m-music-list-wrap" style="display: none;"></div>
+<canvas class="lk-container-canvas-bg rel zIndex2">
+
+</canvas>
+<div class="m-music-lyric-wrap" >
+	<div class="inner">
+		<ul class="js-music-lyric-content">
+                <li class="eof">暂无歌词...</li>
+      </ul>
+	</div>
+</div>
+	  
+<div class="lk-loading">
+	  <div class="sk-double-bounce">
+        <div class="sk-child sk-double-bounce1"></div>
+        <div class="sk-child sk-double-bounce2"></div>
+      </div>
+      <h1 id="loading-txt" class="loading-txt-animate">爱情的能量正在加载之中...</h1>
+</div>
+<div id="leafContainer"></div>
+<div class="lk-container zIndex1 " id="page1">
+	<div class="swiper-container">
+	  <div class="swiper-wrapper">
+	  <div class="swiper-slide">
+	  	<img src="images/pic21.jpg" >
+	  		<h1 class="ani abs-c-c col-orange1 ft22 " swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >我和乖乖相识</h1>
+	  	    <div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt1"  class="tc pdt50">
+					<p class="ani tada animated">2016二月某日，参加了人生里面的第一次相亲</p>
+					<p class="ani wobble animated">（虽然后来被乖乖说不像是第一次相亲的、但是亲爱的我是真的是第一次相亲）</p>
+					<p class="ani bounceInLeft animated">见到乖乖的第一眼我感觉就被吸引了</p>
+					<p class="ani bounceInRight animated">乖乖莫怪我是外貌协会的但是乖乖真的非常漂亮。</p>
+					<p class="ani bounceIn animated">在之后相处了解发现乖乖是一个不仅心地善良、懂事、我特别喜欢乖乖的耿直。</p>
+	  	    	</div>
+	  	    </div>
+	  </div>
+	    <div class="swiper-slide"><img src="images/pic22.jpg" >
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt2"  class="tc pdt100">
+	  	    		
+
+
+
+	  	    		<p class="ani tada animated">想着乖乖到我家然后小孃跟我说让我叫</p>
+					<p class="ani wobble animated">乖乖出去走一下，我当时真的感觉有点儿不自在，但是我还是叫了乖乖出去走一下。</p>
+					<p class="ani bounceInLeft animated">我还记得当时还带着侄女儿一起的，侄女儿真的好可爱哇，</p>
+					<p class="ani bounceInRight animated">说实话侄女儿真的缓解了我不少紧张的心情同时也多了些话题。</p>
+
+	  	    	</div>
+	  	    	
+	  	    </div>
+	  	    <!--<img src="images/pic1-small.jpg" class=" abs fadeIn" style="bottom:50px;left:40px;transform: rotate(60deg);width:150px;height:150px;"/>
+	  	    	<img src="images/pic2-small.jpg" class=" abs fadeInDown" style="bottom:105px;right:38px;transform: rotate(-60deg);width:150px;height:150px;"/>-->
+	    </div>
+	    <div class="swiper-slide"><img src="images/pic3.jpg" >
+	    	<h1 class="ani abs-c-c col-orange1 ft22 pd15" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >第一次和乖乖约会</h1>
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt50">
+	  	    		
+
+	  	    		<p class="ani tada animated">虽然是和同学一起的</p>
+					<p class="ani wobble animated">我记得当时乖乖说那天你大孃家团圆</p>
+					<p class="ani bounceInLeft animated">但是乖乖依然答应来我家陪我和我同学他们见面吃烧烤</p>
+					<p class="ani bounceInRight animated">那天我也记得清清楚楚 2月13号 刚好是情人节前一天</p>
+					<p class="ani bounceIn animated">那天晚上到了乖乖家</p>
+					<p class="ani bounceIn animated">送了乖乖巧克力，然后门都还没有走进去</p>
+					<p class="ani bounceIn animated">下一个情人节我一定要和乖乖一起过。</p>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    
+	    <div class="swiper-slide"><img src="images/pic24.png" >
+	    	<h1 class="ani abs-c-c col-orange1 ft22  pd15" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >和乖乖微信聊天</h1>
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    		
+ 
+	  	    		<p class="ani tada animated">有时候想起异地恋真的不容易 手机真的成了宠物</p>
+					<p class="ani wobble animated"> 从2月11日那天拿到乖乖的微信后</p>
+					<p class="ani bounceInLeft animated">到今天5月20日这整整100天里</p>
+					<p class="ani bounceInRight animated">亲爱的你可以自己对着今年的日历算一下 </p>
+					<p class="ani bounceIn animated">520和我们俩的一百天纪念日是同一天 </p>
+					<p class="ani bounceIn animated">或许这就是所谓的缘分 </p>
+					<p class="ani bounceIn animated">曾经乖乖问我“为什么是你？”</p>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    <div class="swiper-slide"><img src="images/pic25.png"  >
+	    	
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt50">
+	  	    		
+ 
+	  	    		<p class="ani tada animated">  我想说这就是缘分 </p>
+	  	    		
+	  	    		<p class="ani tada animated">   我相信爱情就是在合适的时间遇到合适的人</p>
+					<p class="ani wobble animated">要是那次我没有去，要是去年没有回去</p>
+					<p class="ani wobble animated">也就遇不到乖乖了</p>
+					<p class="ani bounceInLeft animated">  在后来微信里感觉和亲爱的同步率好高  </p>
+					<p class="ani bounceInRight animated"> 总能感觉到乖乖可能会和我同步 </p>
+					<p class="ani bounceInRight animated">同步发红包 同步晚安 同步问吃饭</p>
+					<p class="ani bounceIn animated">微信聊天记录都已经不知道有多少了 </p>
+					<p class="ani bounceIn animated">每次提醒我删掉一些记录的时候</p>
+					<p class="ani bounceIn animated">我宁愿卸载应用也愿意把这些记录留下来</p>
+					<p class="ani bounceIn animated">当和乖乖结束异地恋的时候 </p>
+					<p class="ani bounceIn animated">到时候拿出来和乖乖一起看的我想那会是另一种感受</p>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    
+	    <div class="swiper-slide"><img src="images/pic11.jpg"  >
+	    	<h1 class="ani abs-c-c col-orange1 ft22  pd15" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >返程回成都</h1>
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    
+	  	    		<p class="ani tada animated"> 从2月14号坐车离开成都前往厦门 </p>
+					<p class="ani wobble animated"> 然后到3月30号经历了接近一个半月的时间</p>
+					<p class="ani bounceInLeft animated">我终于可以回成都和乖乖见面了</p>
+					<p class="ani bounceInRight animated">我现在记得最清楚的就是</p>
+					<p class="ani bounceIn animated">回家的前一个星期非常激动 </p>
+					<p class="ani bounceIn animated"> 天天想着时间快到了 马上就可以和乖乖见面了</p>
+					<p class="ani bounceIn animated">虽然我不是踏着七色云彩去见乖乖</p>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    <div class="swiper-slide"><img src="images/pic14.jpg" >
+	
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    		
+
+	  	    		<p class="ani tada animated"> 在飞机上我就在想乖乖   </p>
+	  	    		<p class="ani tada animated"> 下了飞机也在想 我感觉自己就像中了毒一样  </p>
+					<p class="ani wobble animated"> 睡觉也在想 那天下飞机到达住的地方  </p>
+					<p class="ani wobble animated">一直睡不着 想着第二天就能和乖乖见面了</p>
+					<p class="ani bounceInLeft animated">  那种心情是一种紧张和激动的混合心理 </p>
+					
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    	    <div class="swiper-slide"><img src="images/pic5.jpg" >
+	    	<h1 class="ani abs-c-c col-orange1 ft22  pd15" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >和乖乖的六天</h1>
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    		<p class="ani tada animated"> 4月1日 早上乖乖和幺姑姨开着车子来接我  </p>
+					<p class="ani wobble animated"> 在约定的地点 见到乖乖</p>
+					<p class="ani bounceInLeft animated">感觉乖乖变漂亮了 好可爱 好想去抱住（笑）</p>
+					<p class="ani bounceInRight animated">上车后我就拉了乖乖的手 </p>
+					<p class="ani bounceIn animated">乖乖手好小 我想抓住这双手不放一直到老 </p>
+					<p class="ani bounceIn animated"> 按照以前的约定要带乖乖去黄龙溪耍 </p>
+					<p class="ani bounceIn animated">为了让有人为我们拍照 </p>
+	  	    		
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    <div class="swiper-slide"><img src="images/pic17.jpg" >
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;color:#FFFFFF;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    		<p class="ani tada animated"> 我无耻地叫上了我弟 当然不是没有给他好处 </p>
+					<p class="ani wobble animated"> 好处就是可以喝饮料 吃东西(笑) </p>
+					<p class="ani bounceInLeft animated">虽然是黄龙溪人 但是说出来不怕人笑话</p>
+					<p class="ani bounceInRight animated">快艇还是第一次做</p>
+					<p class="ani bounceIn animated"> 最后拍了照片但是乖乖说好丑（笑）</p>
+					<p class="ani bounceIn animated">  倒是开船的师傅倒是拍的很帅</p>
+					<p class="ani bounceIn animated"> 然后第二天我们去了游乐场</p>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    <div class="swiper-slide"><img src="images/pic19.jpg" >
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    		<p class="ani tada animated"> 好多东西都没有玩过 我记得小时候 </p>
+					<p class="ani wobble animated"> 有次春游去了金宇城 坐了里面的旋转木马</p>
+					<p class="ani bounceInLeft animated">结果吐了 回家休息了一天</p>
+					<p class="ani bounceInRight animated"> 所以这次 玩了很多没有玩过的 </p>
+					<p class="ani bounceIn animated"> 很刺激 但是同时也很开心 </p>
+					<p class="ani bounceIn animated"> 和乖乖一起去玩的旋转秋千 很开心 </p>
+					<p class="ani bounceIn animated"> 不知为啥途中把乖乖的手抓的很紧(笑)</p>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    <div class="swiper-slide"><img src="images/pic20.jpg" >
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    		<p class="ani tada animated">  六天中最印象深刻的还是4月5号晚上</p>
+					<p class="ani wobble animated"> 那天乖乖回家拿化妆工具</p>
+					<p class="ani bounceInLeft animated">哪知道我们准备返程的时候下起了大雨</p>
+					<p class="ani bounceInRight animated">还在打雷扯闪电 </p>
+					<p class="ani bounceIn animated"> 说真的我当时真的很害怕 </p>
+					
+	  	    	</div>
+	  	    </div>
+	    </div>
+	   
+	     <div class="swiper-slide"><img src="images/pic12.jpg"  >
+	    	<h1 class="ani abs-c-c col-orange1 ft22  pd15" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="top:0" >返程回厦门</h1>
+	    	<div class=" ani abs-c-c col-orange1 ft20 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt100">
+	  	    
+	  	    		<p class="ani tada animated"> 4月6号 准备返程  </p>
+					<p class="ani wobble animated"> 我车上一直抓着乖乖的手</p>
+					<p class="ani bounceInLeft animated">我知道这一次走后 就至少两三个月才能见面了</p>
+					<p class="ani bounceInRight animated">到达了机场后 车子不好停 </p>
+					<p class="ani bounceIn animated"> 当乖乖站在我面前的时候 我没有给个拥抱</p>
+					<p class="ani bounceIn animated"> 下次我一定要给拥抱 </p>
+					
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    
+	    <div class="swiper-slide"><img src="images/pic15.jpg" >
+	    	<div class=" ani abs-c-c col-orange1 ft28 lineheight25"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  style="top:50px;">
+	  	    	
+	  	    	<div id="page1-txt3"  class="tc pdt110">
+	  	    		 <p class="ani tada animated pd15"> 亲爱的  点击下面的按钮切换背景音乐 </p>
+	  	    		 <p class="ani tada animated pd15"> 那个声音有点儿啥 你听了就知道了！ </p>
+					<a href="javascript://" id="btn-click-for-guaiguai" class="button button-caution button-pill button-jumbo">乖乖谨慎点击</a>
+	  	    	</div>
+	  	    </div>
+	    </div>
+	    
+	  </div>
+	</div>
+</div>
+<canvas id="txt-offect" class="abs canvas"></canvas>
+<!--引入greensock动画库-->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!--引入列表-->
+<script src="js/musicList.js"></script>
+<!--引入波形工具库-->
+<script src="js/wavesurfer.js"></script>
+<!--引入工具库-->
+<script src="js/util.js"></script>
+<!--引入webaudio封装js-->
+<script src="js/webaudio.js"></script>
+<!--引入音频可视化js-->
+<script src="js/lkmusic_visualizer.js"></script>
+<script src="js/leaves.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/txtffct.js"></script>
+<script src="js/520.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+tada
+wobble
+bounceInLeft
+bounceInRight
+bounceIn
